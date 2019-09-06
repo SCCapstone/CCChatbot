@@ -1,1 +1,1 @@
-READEME for the CC Chatbot
+README for the CC Chatbot
