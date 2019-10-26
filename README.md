@@ -11,8 +11,8 @@ technicians to select availability. Google Calendar API will be used for adding 
 
 What the team is using to build project:
 
-Node.js
-Dialogflow
+* Node.js
+* Dialogflow
 
 To use Dialogflow:
 
