@@ -1,29 +1,26 @@
-Project Title
+# Cable Company Chatbot
 
-This first paragraph should be a short description of the app. You can add links to your wiki pages that have more detailed descriptions.
+> Our team is creating an AI chatbot for a Cable Company. The chatbot will resolve internet connectivity issues and will schedule appointments.
+The chatbot will be used by the customers, customer service representatives, and technicians. 
+The chatbot will be made using Dialogflow. A calendar is needed for booking appointments and to allow
+technicians to select availability. Google Calendar API will be used for adding events.
 
-This is a sample outline of a good Readme.md for the UofSC Capstone class. Assume that the readers are other developers who are joining your team. Specifically, the file should contain detailed instructions that any developer can follow to install, compile, run, and test your project. These are not only useful to new developers, but also to you when you have to re-install everything because your old laptop crashed. Also, the teachers of this class will be following your instructions.
+> Place screenshot of the app here.
 
-You can put a pretty screenshot of your app here, once it works well enough.
+# Technologies
 
-Technologies
-List all the stuff the reader will need to install in order to get you app to run in their laptop. For example:
-
-In order to build this project you will need to install:
+What the team is using to build project:
 
 Node.js
-MongoDB
-If possible, list the actual commands you used to install these.
+Dialogflow
 
-You have to install weird-library using their installer.
+To use Dialogflow:
 
-You can install node (on a mac) using:
+In order to use Dialogflow services on google, you will need a gmail account.
 
-brew update
-brew install node
-You only need to add instructions for the machine you are using (mac, windows, linux).
+> https://dialogflow.cloud.google.com/#/login
 
-Setup
+# Setup
 Here you list all the one-time things the developer needs to do after cloning your repo. Sometimes there is no need for this section.
 
 The first time you run the webapp you will need to create a database in your local mysql using the command
@@ -39,7 +36,7 @@ To install the app in the emulator in debug mode click on "Run -> Debug Mode" in
 
 In some cases you will need to add a screenshot of the buttons that need to get pressed in the IDE because there is no menu option.
 
-Deployment
+# Deployment
 Webapps need a deployment section that explains how to get it deployed on the Internet. These should be detailed enough so anyone can re-deploy if needed. Note that you do not put passwords in git.
 
 To deploy the latest master to google cloud you have to:
@@ -68,5 +65,15 @@ command...
 Run behavior tests with
 
 command...
-Authors
-Your names and emails
+# Authors
+### Jahred Danker
+* Email: jdanker@email.sc.edu
+### Alden Perreyclear
+* Email: perreyce@email.sc.edu
+### Epiphany Christian
+* Email: epiphany@email.sc.edu
+### Steven Taylor McGown
+* Emails: Stevenmcgown1@gmail.com
+* Smcgown@email.sc.edu
+### Jacob Rego
+* Email: jrego@email.sc.edu
