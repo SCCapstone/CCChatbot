@@ -14,7 +14,7 @@ What the team is using to build project:
 * Node.js
 * Dialogflow
 
-To use Dialogflow:
+Dialogflow Instructions:
 
 In order to use Dialogflow services on google, you will need a gmail account.
 
