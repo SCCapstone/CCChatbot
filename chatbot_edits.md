@@ -11,5 +11,5 @@ Instructions:
 
 > Bob: created an intent.
 
-_Delete entire example if your the first comment._
+_Delete entire example if you are the first comment._
 
