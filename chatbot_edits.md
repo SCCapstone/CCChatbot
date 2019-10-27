@@ -11,5 +11,12 @@ Instructions:
 
 > Bob: created an intent.
 
-_Delete entire example if you are the first comment._
+Epiphany: Attempted to setup firebase for the dialogflow agent. Following this tutorial:
+https://miningbusinessdata.com/firebase-guide-part-1-create-new-dialogflow-agent/
+First I logged into console.firebase.google.com.
+Then I navigated to Database and selected "Create database" under Cloud Firestore.
+Created a collection labeled "users" in the database.
+In Dialogflow conosle, setting up a database allowed me to enable the Inline Editor in fulfillment.
+I deployed the Inline Editor. _I did all these actions the day before but forgot to leave comment._
+
 
