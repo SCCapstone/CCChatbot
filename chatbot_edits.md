@@ -21,3 +21,5 @@ I deployed the Inline Editor. _I did all these actions the day before but forgot
 
 Epiphany: [10/27/19|2:43pm] Updated the welcome intent for AcmeDemo agent. The welcome intent will greet user and
 prompt user to select one of two options. "Is there a problem with your internet connection or do you wish to schedule an appointment?"
+
+Epiphany: [10/27/19|2:50pm] Edited the fallback intent.
