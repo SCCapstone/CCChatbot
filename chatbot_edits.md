@@ -2,7 +2,7 @@
 
 Instructions:
 * Leave a simple sentence or brief description of any edits done.
-* Immediately comment after the edits are made here.
+* Immediately leave a comment here after any edits are made.
 * Provide name at the beginning of the comment.
 * Leave a space between your comment and the previous comment.
 
