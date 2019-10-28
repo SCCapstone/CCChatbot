@@ -25,3 +25,5 @@ prompt user to select one of two options. "Is there a problem with your internet
 Epiphany: [10/27/19|2:50pm] Edited the fallback intent.
 
 Epiphany: [10/27/19|2:50pm] Edited the internet connection intent.
+
+JregoUSC: [10/27/19|11:11pm] Changed x position in style.css 
