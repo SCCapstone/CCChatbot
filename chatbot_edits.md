@@ -27,3 +27,6 @@ Epiphany: [10/27/19|2:50pm] Edited the fallback intent.
 Epiphany: [10/27/19|2:50pm] Edited the internet connection intent.
 
 JregoUSC: [10/27/19|11:11pm] Changed x position in style.css 
+
+JregoUSC: [10/27/19|11:32pm] Changed x position back to bottom right for chatbot.
+
