@@ -6,6 +6,17 @@ Instructions:
 * Provide name at the beginning of the comment.
 * Leave a space between your comment and the previous comment.
 
+*Do not edit this document if you are making changes to code on github*
+
+The changes to code on github are already documented.
+
+Post here: 
+* if you made changes on the chatbot
+* a service that is used by the chatbot 
+    * e.g setting up a database or adding to a database
+
+Only post here to document working on the chatbot.
+
 > Example:
 > Epiphany: Created AcmeDemo Agent. Then added team members as developers.
 
@@ -26,7 +37,5 @@ Epiphany: [10/27/19|2:50pm] Edited the fallback intent.
 
 Epiphany: [10/27/19|2:50pm] Edited the internet connection intent.
 
-JregoUSC: [10/27/19|11:11pm] Changed x position in style.css 
-
-JregoUSC: [10/27/19|11:32pm] Changed x position back to bottom right for chatbot.
+Epiphany: [11/1/2019|11:00am] Added an appointment intent.
 
