@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background: lightgray;
+}
+#chat-window{
+    background: white;
+    border: 20px;
+    border-color: black;
+    width: 30%;
+    justify-content: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 40%;
+}
