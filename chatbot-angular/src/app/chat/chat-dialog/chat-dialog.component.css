@@ -1,5 +1,5 @@
 h3{
-    width: 100%;
+    width: auto;
 }
 .message {
     border-radius: 50px;
@@ -17,7 +17,7 @@ h3{
 .message.from {
     background-color: #E5E4E9;
     color: #363636;
-    margin-right: 100px;
+    margin-right: 150px;
 
 }
 .message.to + .message.to,
