@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="column"></div>
+    <div class="column column-50">
+        <chat-dialog></chat-dialog>
+    </div>
+    <div class="column"></div>
+  </div>
+
+<main>
+  <h3> Google Calendar + Firebase </h3>
+  <div *ngIf="auth.user$ | async as user">
+    <h3>Logged in as {{ user.displayName }}</h3>
+    <img src="{{ user.photoUrl }}" width="50px">
+  </div>
+
+  <button (click)="auth.login()"> Login with Google </button>
+
+  <button (click)="auth.logout()"> Logout </button>
+
+  <hr>
+
+  <button (click)="auth.getCalendar()"> Get Google Calendar </button>
+  <button (click)="auth.insertEvent()"> Add Event </button>
+
+  <div *ngFor="let item of auth.calendarItems">
+    <h3> {{ item.summary }} - {{ item.status}} </h3>
+    <p><em>Created {{ item.created }} </em></p>
+    <p>{{ item.description }} </p>
+    <hr>
+  </div>
+
+</main>
