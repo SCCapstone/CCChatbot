@@ -1,10 +1,12 @@
 h3{
     width: auto;
+    padding: 5px;
+    margin: 5px;
 }
 .message {
     border-radius: 15px;
     margin: 0 15px 10px;
-    padding: 15px 20px;
+    padding: 15px;
     position: relative;
     font-weight: bold;
 }
@@ -17,10 +19,27 @@ h3{
 .message.from {
     background-color: #E5E4E9;
     color: #363636;
-    margin-right: 150px;
+    margin-right: 100px;
+
 
 }
 .message.to + .message.to,
 .message.from + .message.from {
 margin-top: -10px;
+}
+
+input{
+    margin: 5px;
+    padding: 5px;
+}
+
+#message-box-label{
+    margin: 5px;
+    padding: 5px;
+
+}
+
+button{
+    margin: 5px;
+    padding: 5px;
 }
