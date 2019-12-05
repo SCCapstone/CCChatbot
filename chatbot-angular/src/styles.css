@@ -13,4 +13,13 @@ body{
     right: 0;
     height: 60%;
     overflow: auto;
+    flex-basis: auto;
+}
+
+#faq{
+    margin: 20px;
+    padding: 10px;
+    background: lightcoral;
+    border-radius: 10px;
+
 }
