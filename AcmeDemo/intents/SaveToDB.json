@@ -1,0 +1,58 @@
+{
+  "id": "4572f9e4-5ab4-4c23-b9db-9d861f1d4087",
+  "name": "SaveToDB",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "bf7a8d10-d81a-46a6-ae71-33de934bed63",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "text",
+          "value": "$text",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What would you like to save to database?"
+            },
+            {
+              "lang": "en",
+              "value": "What is being saved to database?"
+            },
+            {
+              "lang": "en",
+              "value": "What is being written to database?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -17,8 +17,17 @@
 'use strict';
 
 const functions = require('firebase-functions');
+// admin is code for database 
+const admin = require('firebase-admin');
 const {google} = require('googleapis');
 const {WebhookClient} = require('dialogflow-fulfillment');
+
+// database
+admin.initializeApp({
+  credential: admin.credential.applicationDefault(),
+  //ws is for web socket
+  databaseURL:'ws://acmedemo-tefspy.firebaseio.com/'
+});
 
 // Enter your calendar ID and service account JSON below.
 const calendarId = '6mf9urqgnl7crnbg17oppp6ens@group.calendar.google.com'; // Example: 6ujc6j6rgfk02cp02vg6h38cs0@group.calendar.google.com
@@ -66,8 +75,33 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       agent.add(`Sorry, we're booked on ${appointmentDateString} at ${appointmentTimeString}. Is there anything else I can do for you?`);
     });
   }
+  function handleSaveToDB(agent){
+    // created a parameter called text in SaveToDB intent
+    // if there was a parameter called soda then code would be
+    // const text = agent.parameters.soda;
+    // gets the text to save to DB
+    const text = agent.parameters.text;
+    // created a table called data
+    // data has one attribute text
+    // saving to db
+    return admin.database().ref('data').set({
+      text: text
+    });
+  }
+  function handleReadFromDB(agent) {
+    // snapshot is the data table
+    // the children are the tables attributes
+    return admin.database().ref('data').once('value').then((snapshot) => {
+      const value = snapshot.child('text').val();
+      if(value !== null){
+        agent.add(`${value} is the element from the database`);
+      }
+    });
+  }
   let intentMap = new Map();
   intentMap.set('Appointment Intent', makeAppointment);  // It maps the intent 'Make Appointment' to the function 'makeAppointment()'
+  intentMap.set('SaveToDB',handleSaveToDB); // It maps the intent 'SaveToDB' to the function 'handleSaveToDB()'
+  intentMap.set('ReadFromDB',handleReadFromDB); // It maps the intent 'ReadFromDB' to the function 'handleReadFromDB()'
   agent.handleRequest(intentMap);
 });
 
