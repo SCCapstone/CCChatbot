@@ -1,0 +1,45 @@
+{
+  "id": "410ff316-889e-4359-88c8-444114e899b9",
+  "parentId": "36442874-1e00-40d0-94f7-982b120ccef6",
+  "rootParentId": "1e0f2385-30a0-4a89-9c31-ac0e127ee552",
+  "name": "slow.y.md.y",
+  "auto": true,
+  "contexts": [
+    "slowymd-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "slow.slow-yes.slowy-yes.slowymd-yes",
+      "affectedContexts": [
+        {
+          "name": "slowymdy-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "When multiple devices are connected to the internet there is a lack of bandwidth. Do you need further assistance?",
+            "There is a lack of bandwidth when multiple devices are connected to the internet. Is there anything else I can help you with?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

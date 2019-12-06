@@ -1,0 +1,46 @@
+{
+  "id": "498f7bec-67cd-46e0-94c4-3c3939ae48bc",
+  "parentId": "36442874-1e00-40d0-94f7-982b120ccef6",
+  "rootParentId": "1e0f2385-30a0-4a89-9c31-ac0e127ee552",
+  "name": "slow.y.md.n",
+  "auto": true,
+  "contexts": [
+    "slowymd-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "slow.slow-yes.slowy-yes.slowymd-no",
+      "affectedContexts": [
+        {
+          "name": "slowymdn-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "Do you live in a busy area?",
+            "Do you live in populous area?",
+            "Do you live in a populated area?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

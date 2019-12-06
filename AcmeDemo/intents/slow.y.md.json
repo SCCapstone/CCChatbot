@@ -1,0 +1,46 @@
+{
+  "id": "36442874-1e00-40d0-94f7-982b120ccef6",
+  "parentId": "fee973eb-3fc5-4058-8e31-482322b94660",
+  "rootParentId": "1e0f2385-30a0-4a89-9c31-ac0e127ee552",
+  "name": "slow.y.md",
+  "auto": true,
+  "contexts": [
+    "slowy-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "slow.slow-yes.slowy-yes",
+      "affectedContexts": [
+        {
+          "name": "slowymd-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "The problem may be that too many devices are using the bandwidth. Try disconnecting devices not being used at the moment. Does this fix the issue?",
+            "The issue may be that too many devices are using the bandwidth. Try disconnecting devices that are not being used. Does this fix the problem?",
+            "The issue may be with the bandwidth. Try freeing up bandwidth by shutting off devices not in use. Does this fix the issue?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

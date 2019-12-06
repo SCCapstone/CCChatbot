@@ -1,0 +1,210 @@
+[
+  {
+    "id": "c2a451d7-da5c-4376-b97c-b7ba5079e330",
+    "data": [
+      {
+        "text": "Looking to book an appointment.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "612ae95c-f05a-4b38-b9f0-3f4411910ad6",
+    "data": [
+      {
+        "text": "Looking for a technician.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "cb7debf4-8f81-492e-9c34-784befb843ba",
+    "data": [
+      {
+        "text": "Need to set up an appointment.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "48613d67-41e9-4026-ae4c-261ba7638834",
+    "data": [
+      {
+        "text": "Need a tech.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "050fac13-5104-4382-9f1a-2cadbc775f4f",
+    "data": [
+      {
+        "text": "Need to schedule an appointment.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "6710fd62-0b28-4e28-806b-bf906efc0a75",
+    "data": [
+      {
+        "text": "Need to book an appointment.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "2c5426c9-0941-48e9-a650-2b061c3d08f6",
+    "data": [
+      {
+        "text": "Need a technician.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "cba6223b-fd9b-48ad-a91c-34fb0a732114",
+    "data": [
+      {
+        "text": "I would like to schedule an appointment for ",
+        "userDefined": false
+      },
+      {
+        "text": "5 pm",
+        "alias": "time",
+        "meta": "@sys.time",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "tomorrow",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      },
+      {
+        "text": ".",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "c1745190-0390-458f-9b9d-2b3e5d227ac0",
+    "data": [
+      {
+        "text": "I would like to book an appointment for ",
+        "userDefined": false
+      },
+      {
+        "text": "today",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "at 3 pm",
+        "alias": "time",
+        "meta": "@sys.time",
+        "userDefined": false
+      },
+      {
+        "text": ".",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "f06553ff-32af-46b1-a3bd-30bbf83ba5f2",
+    "data": [
+      {
+        "text": "Is there a technician available ",
+        "userDefined": false
+      },
+      {
+        "text": "tomorrow",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "at 1 pm?",
+        "alias": "time",
+        "meta": "@sys.time",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e9d07c71-45a8-49ec-b644-8234138a7ae8",
+    "data": [
+      {
+        "text": "I need to schedule a technician for ",
+        "userDefined": false
+      },
+      {
+        "text": "1 pm",
+        "alias": "time",
+        "meta": "@sys.time",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "today",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      },
+      {
+        "text": ".",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "id": "92a8a9db-fe6f-4a32-b21f-9ff35187091b",
+  "parentId": "8dc933a0-1c42-4d6b-8328-a1955a6c9a1f",
+  "rootParentId": "1e0f2385-30a0-4a89-9c31-ac0e127ee552",
+  "name": "slow.n - no - yes",
+  "auto": true,
+  "contexts": [
+    "slown-no-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "slow.slow-no.slown-no.slown-no-yes",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "Would you like to schedule an appointment?",
+            "Do you wish to schedule an appointment?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

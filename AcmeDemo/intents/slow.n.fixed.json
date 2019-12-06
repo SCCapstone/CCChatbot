@@ -1,0 +1,46 @@
+{
+  "id": "633b8abc-0c5e-44fa-ae02-4b4c2fe6ad01",
+  "parentId": "fd0cfb59-4747-4e12-ae42-a79eb9f4cf67",
+  "rootParentId": "1e0f2385-30a0-4a89-9c31-ac0e127ee552",
+  "name": "slow.n.fixed",
+  "auto": true,
+  "contexts": [
+    "slown-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "slow.slow-no.slown-yes",
+      "affectedContexts": [
+        {
+          "name": "slownfixed-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "The problem is the device cannot reach router. Move the router to the middle of the building. Or move the device closer to the router. This should fix the slow internet connection. Do you need anything else?",
+            "The issue is that the router can\u0027t reach the device. Please move the router to middle of the building or move the device closer to the router. Either should fix the issue. Do you need further assistance?",
+            "The slow internet is caused by the device not reaching the router. Move the device closer to the router or move the router to middle of the building. This should fix the issue. Do you need anything else?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

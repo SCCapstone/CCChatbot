@@ -1,0 +1,41 @@
+{
+  "id": "92bcf596-d6f0-4aad-acd6-ee2450b35873",
+  "name": "Default Welcome Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.welcome",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "Hi! Do you have an issue with your internet connection or would you like to book an appointment?",
+            "Hello! Is there a problem with your internet connection or do you wish to schedule an appointment?",
+            "Good day! Are you having trouble connecting to the internet or do you need to schedule a technician?",
+            "Greetings! Are you having problems connecting to the internet or do you want to book an appointment with a technician?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "WELCOME"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

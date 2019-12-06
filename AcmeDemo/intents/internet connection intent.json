@@ -1,0 +1,42 @@
+{
+  "id": "ef06b1e2-fd26-4713-9c53-300ac5f2e553",
+  "name": "internet connection intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "internetconnectionintent-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "Would you mind telling me if you have slow or no internet connection?",
+            "Do you have no internet connection or slow internet connection?",
+            "Could you tell me if there is a slow internet connection or no internet connection?",
+            "Have you lost the internet connection or is the connection slow?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

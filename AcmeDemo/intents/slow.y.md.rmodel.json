@@ -1,0 +1,46 @@
+{
+  "id": "ba677c8b-bd7f-4a37-babe-edbbaf20f5c5",
+  "parentId": "498f7bec-67cd-46e0-94c4-3c3939ae48bc",
+  "rootParentId": "1e0f2385-30a0-4a89-9c31-ac0e127ee552",
+  "name": "slow.y.md.rmodel",
+  "auto": true,
+  "contexts": [
+    "slowymdn-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "slow.slow-yes.slowy-yes.slowymd-no.slowymdn-yes",
+      "affectedContexts": [
+        {
+          "name": "slowymdrmodel-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "Is your router less than two years old?",
+            "Have you purchased your router in the past two years?",
+            "Was your router purchased in the last two years?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

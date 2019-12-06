@@ -1,0 +1,96 @@
+{
+  "id": "cedd0caa-600d-4936-9af4-300106aa4f91",
+  "name": "Appointment Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "fe0d88e9-ac9b-45b0-8338-517e338cc65c",
+          "required": true,
+          "dataType": "@sys.date",
+          "name": "date",
+          "value": "$date",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Sure, when do you want the technician to come by?"
+            },
+            {
+              "lang": "en",
+              "value": "Okay, what day do you want to book an appointment?"
+            },
+            {
+              "lang": "en",
+              "value": "Certainly, what day do you want to schedule an appointment?"
+            },
+            {
+              "lang": "en",
+              "value": "Ok, what day works for you?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "2d35f7e6-d1d2-483a-8ed6-b5344ec5250a",
+          "required": true,
+          "dataType": "@sys.time",
+          "name": "time",
+          "value": "$time",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "At what time?"
+            },
+            {
+              "lang": "en",
+              "value": "What time do want to schedule your appointment for?"
+            },
+            {
+              "lang": "en",
+              "value": "What time do you want the technician to arrive?"
+            },
+            {
+              "lang": "en",
+              "value": "What time?"
+            },
+            {
+              "lang": "en",
+              "value": "What is the time for the appointment?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": "You have scheduled an appointment for $date at $time . Thank you."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
