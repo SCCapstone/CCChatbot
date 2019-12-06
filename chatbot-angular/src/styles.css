@@ -1,25 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+
+* {
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
 body{
     background: lightgray;
+}
+#content{
+    display: flex;
+    justify-content: space-between;
 }
 #chat-window{
     background: white;
     border: 20px;
     border-color: black;
     width: 20%;
-    justify-content: right;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    justify-content: last baseline;
     height: 60%;
     overflow: auto;
-    flex-basis: auto;
+
+
 }
 
 #faq{
-    margin: 20px;
+    margin: 10px;
     padding: 10px;
     background: lightcoral;
     border-radius: 10px;
 
+}
+
+#title{
+    text-align: center;
 }

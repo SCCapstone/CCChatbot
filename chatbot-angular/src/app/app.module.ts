@@ -4,10 +4,14 @@ import { ChatModule } from './chat/chat.module'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { AgentPageComponent } from './agent-page/agent-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomePageComponent,
+    AgentPageComponent
   ],
   imports: [
     BrowserModule,
