@@ -1,0 +1,45 @@
+{
+  "id": "bc032587-34a7-4f01-8b50-2a2bf35ef78e",
+  "parentId": "498f7bec-67cd-46e0-94c4-3c3939ae48bc",
+  "rootParentId": "1e0f2385-30a0-4a89-9c31-ac0e127ee552",
+  "name": "slow.y.md.n - no",
+  "auto": true,
+  "contexts": [
+    "slowymdn-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "slow.slow-yes.slowy-yes.slowymd-no.slowymdn-no",
+      "affectedContexts": [
+        {
+          "name": "slowymdn-no-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "Peak hours can cause a slow internet connection. If that is the case then you may have to wait it out. Do you need help with anything else?",
+            "Internet connection during peak hours may be slow. If this is the cause then you will have to wait it out. Do you need any further assistance?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,40 @@
+{
+  "id": "41c3eb46-2047-4a0f-8bc8-7ee0f1035bd2",
+  "parentId": "bc032587-34a7-4f01-8b50-2a2bf35ef78e",
+  "rootParentId": "1e0f2385-30a0-4a89-9c31-ac0e127ee552",
+  "name": "slow.y.md.n - no - yes",
+  "auto": true,
+  "contexts": [
+    "slowymdn-no-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "slow.slow-yes.slowy-yes.slowymd-no.slowymdn-no.slowymdn-no-yes",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "Would you like to book an appointment?",
+            "Do you want to book an appointment?",
+            "Would you like to schedule an appointment?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

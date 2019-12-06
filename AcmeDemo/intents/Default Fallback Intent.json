@@ -1,0 +1,36 @@
+{
+  "id": "1edf2690-7368-4c3f-9779-007d875ed475",
+  "name": "Default Fallback Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.unknown",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "Sorry, are you looking for help fixing your internet connection or would you like to book an appointment?",
+            "Could you please repeat that? Are you having trouble connecting to the internet or do wish to schedule an appointment?",
+            "Sorry, didn\u0027t catch that. Do you need help with your internet connection or do you need to schedule an appointment?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": true,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
