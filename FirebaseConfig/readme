@@ -1,0 +1,10 @@
+Readme for Firebase SDK
+To get the config of web app
+Sign into Firebase
+https://console.firebase.google.com/
+Open project AcmeDemo
+Click the wheel/gear icon in the top left corner
+Then select Project settings from the pop up menu
+Scroll to bottom of page and find the "Your apps" section
+Select Config
+To get the Firebase config file

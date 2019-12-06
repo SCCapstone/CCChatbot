@@ -1,0 +1,20 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC95dOFfDphP70AdAHfPvlUHE_Yl7BWA6w",
+    authDomain: "acmedemo-tefspy.firebaseapp.com",
+    databaseURL: "https://acmedemo-tefspy.firebaseio.com",
+    projectId: "acmedemo-tefspy",
+    storageBucket: "acmedemo-tefspy.appspot.com",
+    messagingSenderId: "800812168325",
+    appId: "1:800812168325:web:dbf8b9cd42f03d0c50e5ec"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
