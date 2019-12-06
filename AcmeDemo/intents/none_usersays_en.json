@@ -1,0 +1,74 @@
+[
+  {
+    "id": "6abc1f66-ac2e-4664-82c8-929324ce5cf8",
+    "data": [
+      {
+        "text": "no internet connection",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "add7ceb9-ee42-4a2d-8990-0740aa478ea5",
+    "data": [
+      {
+        "text": "none",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "7611af75-3deb-446b-a2d3-20056b8dc393",
+    "data": [
+      {
+        "text": "internet connection gone",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e10276c0-0e27-4d39-966f-e9754ea8ec9a",
+    "data": [
+      {
+        "text": "dropped internet connection",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "7fa54113-3e1d-4905-b49b-2db9b5a2f0d5",
+    "data": [
+      {
+        "text": "lost internet connection",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "eed6588c-3c3c-40cd-9529-645dd34da3da",
+    "data": [
+      {
+        "text": "not at all",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "id": "fee973eb-3fc5-4058-8e31-482322b94660",
+  "parentId": "1e0f2385-30a0-4a89-9c31-ac0e127ee552",
+  "rootParentId": "1e0f2385-30a0-4a89-9c31-ac0e127ee552",
+  "name": "slow.y",
+  "auto": true,
+  "contexts": [
+    "slow-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "slow.slow-yes",
+      "affectedContexts": [
+        {
+          "name": "slowy-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "Are there multiple devices connected to the internet in the building?",
+            "Are there multiple people using devices in the building?",
+            "Are there multiple devices using the internet connection in the building?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

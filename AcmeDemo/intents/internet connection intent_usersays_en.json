@@ -1,0 +1,158 @@
+[
+  {
+    "id": "8ed67460-b289-48fd-bce5-4013e8a20efa",
+    "data": [
+      {
+        "text": "internet connection help",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "33fe60b6-f1a1-42da-8a2e-23841325b603",
+    "data": [
+      {
+        "text": "failed internet connection",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "b2b19278-36a8-485e-9a7a-a2f52087fe4f",
+    "data": [
+      {
+        "text": "connection error",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "2d6ee19d-0d2f-491e-aad7-9938e4838963",
+    "data": [
+      {
+        "text": "issues with the internet",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "fba40fc2-af2c-4770-96a7-cee4afd2b9c9",
+    "data": [
+      {
+        "text": "issues with my connection",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "b0078996-56a5-4497-991b-af95fef45988",
+    "data": [
+      {
+        "text": "internet connection appears to have stopped working",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "4de0b332-53f6-4159-8ce9-0b5ef2d994ab",
+    "data": [
+      {
+        "text": "internet connection troubleshooting",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "5528135e-0658-49fb-890c-83231e3d957f",
+    "data": [
+      {
+        "text": "internet connection problems",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "eae3effd-d5a3-4eaa-8662-fef1ee73447c",
+    "data": [
+      {
+        "text": "Troubleshoot my internet connection.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e40c55c4-65ce-4d5a-94bf-1432a99895c3",
+    "data": [
+      {
+        "text": "Internet connection troubles.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "17623bdf-afce-48e5-86c1-c27797399d2b",
+    "data": [
+      {
+        "text": "internet troubles",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e2c43c4e-241b-4254-9896-58deeaeaa060",
+    "data": [
+      {
+        "text": "My internet has stopped working.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "22d2863d-ec4b-4717-a5ea-46c25c4b33ff",
+    "data": [
+      {
+        "text": "My internet is not working.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

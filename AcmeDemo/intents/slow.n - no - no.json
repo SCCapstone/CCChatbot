@@ -1,0 +1,39 @@
+{
+  "id": "55a04ec3-f3c0-4d5a-aaae-d52f8d2ad351",
+  "parentId": "8dc933a0-1c42-4d6b-8328-a1955a6c9a1f",
+  "rootParentId": "1e0f2385-30a0-4a89-9c31-ac0e127ee552",
+  "name": "slow.n - no - no",
+  "auto": true,
+  "contexts": [
+    "slown-no-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "slow.slow-no.slown-no.slown-no-no",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "Thank you and have a great day.",
+            "Thanks and I hope you have a nice day."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

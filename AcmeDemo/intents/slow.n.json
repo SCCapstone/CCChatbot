@@ -1,0 +1,59 @@
+{
+  "id": "fd0cfb59-4747-4e12-ae42-a79eb9f4cf67",
+  "parentId": "1e0f2385-30a0-4a89-9c31-ac0e127ee552",
+  "rootParentId": "1e0f2385-30a0-4a89-9c31-ac0e127ee552",
+  "name": "slow.n",
+  "auto": true,
+  "contexts": [
+    "slow-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "slow.slow-no",
+      "affectedContexts": [
+        {
+          "name": "slown-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "9b3e1704-388e-43b7-84b6-cef1c3772066",
+          "required": false,
+          "dataType": "@sys.number",
+          "name": "number",
+          "value": "$number",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "Try moving the device experiencing the issue closer to the router. Did this fix the issue?",
+            "Move the device to the same room as the router. Does this fix the issue?",
+            "Check the connection in the room with the router by taking the device experiencing the slow internet into the room with the router. Does this fix the issue?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
