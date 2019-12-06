@@ -7,32 +7,43 @@
 }
 
 body{
-    background: lightgray;
+    background: #DAE5F5;
 }
 #content{
-    display: flex;
-    justify-content: space-between;
+
+
 }
 #chat-window{
-    background: white;
+    margin: 10px;
+    padding: 10px;
+    background: #9DC0F5;
     border: 20px;
     border-color: black;
-    width: 20%;
-    justify-content: last baseline;
+    width: 27%;
+    justify-content: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     height: 60%;
     overflow: auto;
-
+    border-radius: 5px;
 
 }
 
 #faq{
     margin: 10px;
     padding: 10px;
-    background: lightcoral;
+    background: #9DC0F5;
     border-radius: 10px;
+    float: left;
 
 }
 
 #title{
+    justify-content: center;
+}
+
+h2{
     text-align: center;
 }
+
