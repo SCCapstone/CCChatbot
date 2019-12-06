@@ -7,3 +7,7 @@ The Appointment Intent takes the request from the user and
 uses Google Calendar API to book the appointment and return a confirmation to the user.
 
 The name of the calendar is ACME Cable Company.
+
+Fulfillment will also read and write to database.
+The database has one table called data with one attribute which is text.
+The fulfillment uses intents SaveToDB and ReadFromDB.
