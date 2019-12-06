@@ -1,0 +1,45 @@
+{
+  "id": "24b410ff-67d0-41b3-97a9-78b40df7476d",
+  "parentId": "ba677c8b-bd7f-4a37-babe-edbbaf20f5c5",
+  "rootParentId": "1e0f2385-30a0-4a89-9c31-ac0e127ee552",
+  "name": "slow.y.md.rmodel - no",
+  "auto": true,
+  "contexts": [
+    "slowymdrmodel-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "slow.slow-yes.slowy-yes.slowymd-no.slowymdn-yes.slowymdrmodel-no",
+      "affectedContexts": [
+        {
+          "name": "slowymdrmodel-no-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "The router may be using a default wireless frequency channel. The default channels are 1,6, and 11. Try selecting a  less crowded channel. You can manually change channels by logging in to your router admin. Did this solve the issue?",
+            "Older models do not look for a less crowded channel. The router may be using the default channel which is 1,6, or 11. If this is the case please try switching to a less crowded frequency channel. Login into the router admin and manually change the channel there. Does this solve the issue?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
