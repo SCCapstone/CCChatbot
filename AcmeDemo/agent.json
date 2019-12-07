@@ -13,11 +13,13 @@
     "startIntents": [],
     "systemIntents": [],
     "endIntentIds": [
+      "4975abe5-9576-44da-8060-cc2a8cc79fe5",
       "55a04ec3-f3c0-4d5a-aaae-d52f8d2ad351",
       "be9d1e7c-1fb6-4d36-8b9e-a73e20b0f2be",
       "f71b2979-76c6-4d67-aa4a-67531b655c95",
       "c3b1bcb0-700d-408f-9835-72c216a2a5ac",
-      "5c20afbb-e42c-4a78-820d-b5a81eeb445f"
+      "5c20afbb-e42c-4a78-820d-b5a81eeb445f",
+      "d8bf39c6-de09-491c-9f55-545a1352a2e9"
     ],
     "oAuthLinking": {
       "required": false,

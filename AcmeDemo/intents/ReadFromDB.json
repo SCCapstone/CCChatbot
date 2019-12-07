@@ -1,16 +1,11 @@
 {
-  "id": "55a04ec3-f3c0-4d5a-aaae-d52f8d2ad351",
-  "parentId": "8dc933a0-1c42-4d6b-8328-a1955a6c9a1f",
-  "rootParentId": "1e0f2385-30a0-4a89-9c31-ac0e127ee552",
-  "name": "slow.n - no - no",
+  "id": "17d0b14a-9c8d-45a5-820c-07cb31e9d65b",
+  "name": "ReadFromDB",
   "auto": true,
-  "contexts": [
-    "slown-no-followup"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
-      "action": "slow.slow-no.slown-no.slown-no-no",
       "affectedContexts": [],
       "parameters": [],
       "messages": [
@@ -18,10 +13,7 @@
           "type": 0,
           "lang": "en",
           "condition": "",
-          "speech": [
-            "Thank you and have a great day.",
-            "Thanks and have a nice day."
-          ]
+          "speech": []
         }
       ],
       "defaultResponsePlatforms": {},
@@ -29,7 +21,7 @@
     }
   ],
   "priority": 500000,
-  "webhookUsed": false,
+  "webhookUsed": true,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
   "events": [],
