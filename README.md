@@ -21,7 +21,7 @@ In order to use Dialogflow services on google, you will need a gmail account.
 > https://dialogflow.cloud.google.com/#/login
 
 # Setup
-The chatbot hosted on our support page engages the user about their slow internet connection. The chatbot reads and writes to a firebase database. The chat will also take an appointment request from the user. The chatbot will use Google Calendar API to send event to Acme Company calendar. 
+The chatbot hosted on our support page engages the user about their slow internet connection. The chatbot reads and writes to a firebase database. The chatbot uses Google Calendar API to book an appointment on the Acme Company calendar. 
 
 The original support page was altered to included dialog suggestions. The support page previously had an FAQ section on the left side of the web page. An issue was submitted to show the support page with the FAQ section.
 
