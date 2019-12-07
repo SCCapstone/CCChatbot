@@ -21,9 +21,7 @@ In order to use Dialogflow services on google, you will need a gmail account.
 > https://dialogflow.cloud.google.com/#/login
 
 # Setup
-The chatbot hosted on our support page engages the user about their slow internet connection. The chatbot reads and writes to a firebase database. The chat will also take an appointment request from the user. However, app design in angular will not use Google Calendar API.
-
-Although, the web demo provided by dialogflow does use Google Calendar API. It will send any appointment request to our company's google calendar. The chatbot in both angular web demo and dialogflow web demo is the same. 
+The chatbot hosted on our support page engages the user about their slow internet connection. The chatbot reads and writes to a firebase database. The chat will also take an appointment request from the user. The chatbot will use Google Calendar API to send event to Acme Company calendar. 
 
 The original support page was altered to included dialog suggestions. The support page previously had an FAQ section on the left side of the web page. An issue was submitted to show the support page with the FAQ section.
 
@@ -31,15 +29,13 @@ The original support page was altered to included dialog suggestions. The suppor
 
 Click the link https://acme-chatbot.firebaseapp.com/ to view the chatbot built and design with Angular.
 
-Click the link https://bot.dialogflow.com/144fa622-1dcb-43a6-b535-f9107a8edb6b to view the web demo chatbot provided by dialogflow. 
-
 The Acme Cable Company Calendar https://calendar.google.com/calendar?cid=Nm1mOXVycWdubDdjcm5iZzE3b3BwcDZlbnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.
 
 # Testing
 
 Dialog for testing the angular chatbot is provided on the support page.
 
-Use the dialogflow web demo to test the Google Calendar API.
+Open the calendar to view appointment.
 
 Angular Chatbot reads and writes to DB. Engages the user about their internet connection.
 
