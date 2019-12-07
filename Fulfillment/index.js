@@ -30,8 +30,8 @@ admin.initializeApp({
 });
 
 // Enter your calendar ID and service account JSON below.
-const calendarId = '6mf9urqgnl7crnbg17oppp6ens@group.calendar.google.com'; // Example: 6ujc6j6rgfk02cp02vg6h38cs0@group.calendar.google.com
-const serviceAccount = {
+const calendarId2 = '6mf9urqgnl7crnbg17oppp6ens@group.calendar.google.com'; // Example: 6ujc6j6rgfk02cp02vg6h38cs0@group.calendar.google.com
+const serviceAccount2 = {
   "type": "service_account",
   "project_id": "acmedemo-tefspy",
   "private_key_id": "7c85db2de70e361e4c645f21e30086ec3b8a78fb",
@@ -46,8 +46,8 @@ const serviceAccount = {
 
 // Set up Google Calendar service account credentials
 const serviceAccountAuth = new google.auth.JWT({
-  email: serviceAccount.client_email,
-  key: serviceAccount.private_key,
+  email: serviceAccount2.client_email,
+  key: serviceAccount2.private_key,
   scopes: 'https://www.googleapis.com/auth/calendar'
 });
 
@@ -109,7 +109,7 @@ function createCalendarEvent (dateTimeStart, dateTimeEnd) {
   return new Promise((resolve, reject) => {
     calendar.events.list({  // List all events in the specified time period
       auth: serviceAccountAuth,
-      calendarId: calendarId,
+      calendarId: calendarId2,
       timeMin: dateTimeStart.toISOString(),
       timeMax: dateTimeEnd.toISOString()
     }, (err, calendarResponse) => {
@@ -119,7 +119,7 @@ function createCalendarEvent (dateTimeStart, dateTimeEnd) {
       } else {
         // Create an event for the requested time period
         calendar.events.insert({ auth: serviceAccountAuth,
-          calendarId: calendarId,
+          calendarId: calendarId2,
           resource: {summary: 'Technician Appointment',
             start: {dateTime: dateTimeStart},
             end: {dateTime: dateTimeEnd}}
