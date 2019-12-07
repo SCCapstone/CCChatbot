@@ -35,9 +35,9 @@ The Acme Cable Company Calendar https://calendar.google.com/calendar?cid=Nm1mOXV
 
 Dialog for testing the angular chatbot is provided on the support page.
 
-Open the calendar to view appointment.
+Open the calendar to view all appointments.
 
-Angular Chatbot reads and writes to DB. Engages the user about their internet connection.
+Angular Chatbot reads and writes to DB. Engages the user about their internet connection. Books appointments using Google Calendar.
 
 # Authors
 ### Jahred Danker
