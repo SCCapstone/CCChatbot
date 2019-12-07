@@ -21,50 +21,28 @@ In order to use Dialogflow services on google, you will need a gmail account.
 > https://dialogflow.cloud.google.com/#/login
 
 # Setup
-Here you list all the one-time things the developer needs to do after cloning your repo. Sometimes there is no need for this section.
+The chatbot hosted on our support page engages the user about their slow internet connection. The chatbot reads and writes to a firebase database. The chat will also take appointment request from user. However, app design in angular will not use Google Calendar API.
 
-The first time you run the webapp you will need to create a database in your local mysql using the command
+Although, the web demo provided by dialogflow does use Google Calendar API. Will send any appointment request to our company's google calendar. The chatbot in both angular web demo and dialogflow web demo is the same. 
 
-mysql << create database....
-Running
-To run the app in your laptop use the command:
-
-the command
-If you are bulding for mobile you might have several different ways of running your app. List all the ones you use.
-
-To install the app in the emulator in debug mode click on "Run -> Debug Mode" in Android Studio.
-
-In some cases you will need to add a screenshot of the buttons that need to get pressed in the IDE because there is no menu option.
+The original support page was alter to included dialog suggestions. The support page previously had a FAQ section on the left side of web page. A issue was submitted to show the support page with the FAQ section.
 
 # Deployment
-Webapps need a deployment section that explains how to get it deployed on the Internet. These should be detailed enough so anyone can re-deploy if needed. Note that you do not put passwords in git.
 
-To deploy the latest master to google cloud you have to:
+Click the link https://acme-chatbot.firebaseapp.com/ to view the chatbot built and design with Angular.
 
-Mobile apps will also sometimes need some instructions on how to get the app on the phone.
+Click the link https://bot.dialogflow.com/144fa622-1dcb-43a6-b535-f9107a8edb6b to view the web demo chatbot provided by dialogflow. 
 
-To run it on a phone simply connect the phone via a USB cable to your laptop and then click on "Run" in Android Studio. Make sure the phone is in Developer mode.
+The Acme Cable Company Calendar https://calendar.google.com/calendar?cid=Nm1mOXVycWdubDdjcm5iZzE3b3BwcDZlbnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.
 
-Testing
-In 492 you will write automated tests. When you do you will need to add a section that explains how to run them.
+# Testing
 
-The unit tests are located at /test/unit.
+Dialog for testing the angular chatbot is provided on the support page.
 
-The behavioral tests are located at /test/casper/.
+Use the the dialogflow web demo to test Google Calendar API.
 
-Testing Technology
-In some cases you need to install test runners, etc. Explain how.
+Angular Chatbot reads and writes to db. Engages user about their internet connection.
 
-Install Jasmine with
-
-npm install jasmine
-Running Tests
-Run the unit tests with the command
-
-command...
-Run behavior tests with
-
-command...
 # Authors
 ### Jahred Danker
 * Email: jdanker@email.sc.edu
