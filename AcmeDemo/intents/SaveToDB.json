@@ -40,7 +40,7 @@
           "type": 0,
           "lang": "en",
           "condition": "",
-          "speech": []
+          "speech": "Entering input into database."
         }
       ],
       "defaultResponsePlatforms": {},
