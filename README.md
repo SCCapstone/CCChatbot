@@ -21,11 +21,11 @@ In order to use Dialogflow services on google, you will need a gmail account.
 > https://dialogflow.cloud.google.com/#/login
 
 # Setup
-The chatbot hosted on our support page engages the user about their slow internet connection. The chatbot reads and writes to a firebase database. The chat will also take appointment request from user. However, app design in angular will not use Google Calendar API.
+The chatbot hosted on our support page engages the user about their slow internet connection. The chatbot reads and writes to a firebase database. The chat will also take an appointment request from the user. However, app design in angular will not use Google Calendar API.
 
-Although, the web demo provided by dialogflow does use Google Calendar API. Will send any appointment request to our company's google calendar. The chatbot in both angular web demo and dialogflow web demo is the same. 
+Although, the web demo provided by dialogflow does use Google Calendar API. It will send any appointment request to our company's google calendar. The chatbot in both angular web demo and dialogflow web demo is the same. 
 
-The original support page was alter to included dialog suggestions. The support page previously had a FAQ section on the left side of web page. A issue was submitted to show the support page with the FAQ section.
+The original support page was altered to included dialog suggestions. The support page previously had an FAQ section on the left side of the web page. An issue was submitted to show the support page with the FAQ section.
 
 # Deployment
 
@@ -39,9 +39,9 @@ The Acme Cable Company Calendar https://calendar.google.com/calendar?cid=Nm1mOXV
 
 Dialog for testing the angular chatbot is provided on the support page.
 
-Use the the dialogflow web demo to test Google Calendar API.
+Use the dialogflow web demo to test the Google Calendar API.
 
-Angular Chatbot reads and writes to db. Engages user about their internet connection.
+Angular Chatbot reads and writes to DB. Engages the user about their internet connection.
 
 # Authors
 ### Jahred Danker
