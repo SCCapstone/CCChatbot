@@ -25,9 +25,9 @@
           "lang": "en",
           "condition": "",
           "speech": [
-            "Are there multiple devices connected to the internet in the building?",
+            "In your home are there multiple devices connected to the internet?",
             "Are there multiple people using devices in the building?",
-            "Are there multiple devices using the internet connection in the building?"
+            "Are there multiple devices using the internet connection?"
           ]
         }
       ],
