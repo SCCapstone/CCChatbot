@@ -60,7 +60,7 @@ const timeZoneOffset = '-05:00';         // Change it to your time zone offset
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
   const agent = new WebhookClient({ request, response });
 
-  function makeAppointment (agent) {
+  function makeAppointment(agent) {
     // Use the Dialogflow's date and time parameters to create Javascript Date instances, 'dateTimeStart' and 'dateTimeEnd',
     // which are used to specify the appointment's time.
     const appointmentDuration = 1;// Define the length of the appointment to be one hour.
@@ -105,7 +105,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   agent.handleRequest(intentMap);
 });
 
-function createCalendarEvent (dateTimeStart, dateTimeEnd) {
+function createCalendarEvent(dateTimeStart, dateTimeEnd) {
   return new Promise((resolve, reject) => {
     calendar.events.list({  // List all events in the specified time period
       auth: serviceAccountAuth,
@@ -134,7 +134,7 @@ function createCalendarEvent (dateTimeStart, dateTimeEnd) {
 
 // A helper function that receives Dialogflow's 'date' and 'time' parameters and creates a Date instance.
 function convertParametersDate(date, time){
-  return new Date(Date.parse(date.split('T')[0] + 'T' + time.split('T')[1].split('-')[0] + timeZoneOffset));
+  return new Date(Date.parse(date + 'T' + time + timeZoneOffset));
 }
 
 // A helper function that adds the integer value of 'hoursToAdd' to the Date instance 'dateObj' and returns a new Data instance.
