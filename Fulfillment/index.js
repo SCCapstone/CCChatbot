@@ -1,6 +1,6 @@
 /**
  * Copyright 2017 Google Inc. All Rights Reserved.
- *
+ * https://cloud.google.com/dialogflow/docs/tutorials/build-an-agent/create-fulfillment-using-webhook
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -21,7 +21,8 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 const {google} = require('googleapis');
 const {WebhookClient} = require('dialogflow-fulfillment');
-
+  // source for setting up database
+  // https://www.youtube.com/watch?v=C8iaKOjyqnM
 // database
 admin.initializeApp({
   credential: admin.credential.applicationDefault(),
@@ -75,6 +76,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       agent.add(`Sorry, we're booked on ${appointmentDateString} at ${appointmentTimeString}. Is there anything else I can do for you?`);
     });
   }
+  // source for functions of save and read
+  // https://www.youtube.com/watch?v=C8iaKOjyqnM
   function handleSaveToDB(agent){
     // created a parameter called text in SaveToDB intent
     // if there was a parameter called soda then code would be
