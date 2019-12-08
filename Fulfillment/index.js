@@ -23,6 +23,7 @@ const {google} = require('googleapis');
 const {WebhookClient} = require('dialogflow-fulfillment');
   // source for setting up database
   // https://www.youtube.com/watch?v=C8iaKOjyqnM
+// name: Axle Web Technologies
 // database
 admin.initializeApp({
   credential: admin.credential.applicationDefault(),
@@ -78,6 +79,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   }
   // source for functions of save and read
   // https://www.youtube.com/watch?v=C8iaKOjyqnM
+  // name: Axle Web Technologies
   function handleSaveToDB(agent){
     // created a parameter called text in SaveToDB intent
     // if there was a parameter called soda then code would be
