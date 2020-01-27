@@ -1,8 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {LoginPageComponent} from './login-page/login-page.component';
+import {AgentPageComponent} from './agent-page/agent-page.component';
+import {HomePageComponent} from './home-page/home-page.component';
+import {ChatDialogComponent} from './chat/chat-dialog/chat-dialog.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [  
+{ path: 'login', component: LoginPageComponent },
+{ path: 'agent', component: AgentPageComponent },
+{ path: 'home', component: HomePageComponent },
+{ path: 'chat', component: ChatDialogComponent}, 
+
+// simple view to show error 404
+{ path: '**', component: PageNotFoundComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
