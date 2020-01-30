@@ -34,7 +34,7 @@ const appRoutes: Routes = [
 
   // simple view to show error 404
   { path: '**', component: PageNotFoundComponent }
-];
+]; 
 
 
 
