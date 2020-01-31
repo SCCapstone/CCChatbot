@@ -9,12 +9,13 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 const routes: Routes = [  
 { path: 'login', component: LoginPageComponent },
-{ path: 'agent', component: AgentPageComponent },
-{ path: 'home', component: HomePageComponent },
+{ path: 'admin', component: AgentPageComponent },
+{ path: '', component: HomePageComponent },
 { path: 'chat', component: ChatDialogComponent}, 
 
 // simple view to show error 404
-{ path: '**', component: PageNotFoundComponent }];
+//{ path: '**', component: PageNotFoundComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
