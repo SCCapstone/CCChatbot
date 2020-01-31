@@ -1,5 +1,20 @@
-<router-outlet></router-outlet>
+
+<app-home-page></app-home-page>
 <main>
+
+  <section class="hero is-medium is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Primary bold title
+        </h1>
+        <h2 class="subtitle">
+          Primary bold subtitle
+        </h2>
+      </div>
+    </div>
+  </section>
+  
 <!-- Buttons need to be changed to events that happen automatically -->
   <button (click)="auth.login()"> Login </button>
   <button (click)="auth.getCalendar()"> Get Google Calendar </button>
@@ -16,3 +31,4 @@
   </div>
 
 </main>
+<router-outlet></router-outlet>
