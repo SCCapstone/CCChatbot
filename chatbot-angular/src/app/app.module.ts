@@ -13,6 +13,8 @@ import { AgentPageComponent } from './agent-page/agent-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ChatDialogComponent } from './chat/chat-dialog/chat-dialog.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 const firebase = {
@@ -45,7 +47,9 @@ const appRoutes: Routes = [
     HomePageComponent,
     AgentPageComponent,
     LoginPageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     RouterModule.forRoot(

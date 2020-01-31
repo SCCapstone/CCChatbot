@@ -1,34 +1,25 @@
-
-<app-home-page></app-home-page>
 <main>
+  <!--Header-->
+<app-header></app-header>
 
-  <section class="hero is-medium is-primary is-bold">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          Primary bold title
-        </h1>
-        <h2 class="subtitle">
-          Primary bold subtitle
-        </h2>
-      </div>
-    </div>
-  </section>
-  
-<!-- Buttons need to be changed to events that happen automatically -->
+
+<!--Body-->
+<app-home-page></app-home-page>
+
+<!-- Buttons need to be changed to events that happen automatically 
   <button (click)="auth.login()"> Login </button>
   <button (click)="auth.getCalendar()"> Get Google Calendar </button>
 
-  <!-- Connect with dialog flow -->
-  <button (click)="auth.insertEvent()"> Add Event </button>
+   Connect with dialog flow 
+  <button (click)="auth.insertEvent()"> Add Event </button>-->
 
-  <!-- Loops over current items in calender (Testing purposes) -->
-  <div *ngFor="let item of auth.calendarItems">
-    <h3> {{ item.summary }} - {{ item.status}} </h3>
-    <p><em>Created {{ item.created }} </em></p>
-    <p>{{ item.description }} </p>
-    <hr>
-  </div>
+
 
 </main>
+
+<!--Routes Injected here-->
 <router-outlet></router-outlet>
+
+<!--Footer-->
+
+<app-footer></app-footer>
