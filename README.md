@@ -32,6 +32,11 @@ Click the link https://acme-chatbot.firebaseapp.com/ to view the chatbot.
 The Acme Cable Company Calendar https://calendar.google.com/calendar?cid=Nm1mOXVycWdubDdjcm5iZzE3b3BwcDZlbnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.
 
 # Testing
+Before testing in a new directory ALLWAYS run the following under the ~\CCChatbot\chatbot-angular directory:
+"npm install yarn"
+"npm update"
+Running these commands will install yarn and update the package manager.  If these are not run, Behavioral tests may fail.
+
 Both unit and behavioral testing in run through Karma/Jasmine using the prefix "ng" from the "chatbot-angular" directive.  
 These commands are "ng test" and "ng e2e"
 
