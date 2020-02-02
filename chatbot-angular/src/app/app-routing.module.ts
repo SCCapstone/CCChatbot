@@ -7,7 +7,7 @@ import {ChatDialogComponent} from './chat/chat-dialog/chat-dialog.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 
-const routes: Routes = [  
+export const routes: Routes = [  
 { path: 'login', component: LoginPageComponent },
 { path: 'admin', component: AgentPageComponent },
 { path: '', component: HomePageComponent },
