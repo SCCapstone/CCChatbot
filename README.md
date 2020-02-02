@@ -32,6 +32,20 @@ Click the link https://acme-chatbot.firebaseapp.com/ to view the chatbot.
 The Acme Cable Company Calendar https://calendar.google.com/calendar?cid=Nm1mOXVycWdubDdjcm5iZzE3b3BwcDZlbnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.
 
 # Testing
+Both unit and behavioral testing in run through Karma/Jasmine using the prefix "ng" from the "chatbot-angular" directive.  
+These commands are "ng test" and "ng e2e"
+
+Unit testing looks recursivly through the app components and finds the files: "name.spec.ts" and "name.ts".  
+Unit tests may be written using jasmine commands inside the .spec.ts files. 
+The tests are compiled and executed when running the "ng test" command from the "chatbot-angular" directive.  
+Currently a sample test may be viewed in the "unit-test" module.  This same test simply checks if a number is negative.
+Note that not many unit tests will be written, as we are not writing functions to change values in the project.
+
+Behavioral testing looks at the ~\CCChatbot\chatbot-angular\e2e\src directory, and located the files "app.e2e-spec.ts" and
+"app.po.ts".  As with unit tets, e2e tests are written in the the .spec.ts files.  Browser action is handled by the "app.po.ts" file.  
+This allows us to simulate browsing.  Currently, the only test written fetches the css of the home page header, and checks that it is displaying the correct text.  However, future tests can, and will, be written to check routing pathing, and "on click" functionality.  
+These e2e tests can be run by invoking the "ng e2e" from the "chatbot-angular" directive.
+
 
 Dialog for testing the angular chatbot is provided on the support page.
 
