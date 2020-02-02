@@ -46,6 +46,8 @@ Behavioral testing looks at the ~\CCChatbot\chatbot-angular\e2e\src directory, a
 This allows us to simulate browsing.  Currently, the only test written fetches the css of the home page header, and checks that it is displaying the correct text.  However, future tests can, and will, be written to check routing pathing, and "on click" functionality.  
 These e2e tests can be run by invoking the "ng e2e" from the "chatbot-angular" directive.
 
+On success, these tests should both print "success" in the console, as well as the popup window they display (currently chrome).
+On failure, these tests should both print "failure" in the console, as well as the popup window they display (still chrome).
 
 Dialog for testing the angular chatbot is provided on the support page.
 
