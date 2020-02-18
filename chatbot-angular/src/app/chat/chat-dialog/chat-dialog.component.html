@@ -9,12 +9,12 @@
 
 </ng-container>
 
+<div class="messaging">
 
-<label for="nameField" id="message-box-label">Your Message</label>
+  <input class="input is-rounded" type="text" placeholder="Your Message" [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
 
+  <button class="button" (click)="sendMessage()">Send</button>
+</div>
 
-<input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
-
-<button (click)="sendMessage()">Send</button>
 
 
