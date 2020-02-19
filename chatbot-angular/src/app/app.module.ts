@@ -61,8 +61,7 @@ const appRoutes: Routes = [
     AppRoutingModule,
     ChatModule,
     AngularFireModule.initializeApp(firebase),
-    AngularFireAuthModule,
-    NgbModule.forRoot()
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
