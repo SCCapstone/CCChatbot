@@ -29,6 +29,7 @@
     "firebase": "^7.8.2",
     "jquery": "^3.4.1",
     "ng": "0.0.0",
+    "ngx-socket-io": "^3.0.1",
     "rxjs": "~6.4.0",
     "rxjs-compat": "^6.5.4",
     "socket.io": "^2.3.0",
