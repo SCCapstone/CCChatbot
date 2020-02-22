@@ -14,19 +14,9 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ChatDialogComponent } from './chat/chat-dialog/chat-dialog.component';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AngularFirestore } from '@angular/fire/firestore';
 
-
-const firebase = {
-  apiKey: 'AIzaSyD7d2VTNye12itFkj7rEIz3Mlw7wupdmXA',
-  authDomain: 'acmedemo-tefspy.firebaseapp.com',
-  dataBaseURL: 'https://acmedemo-tesfpy.firebaseio.com',
-  projectId: 'acmedemo-tefspy',
-  storageBucket: 'acmedemo-tefspy.appspot.com',
-  messagingSenderId: '800812168325',
-  appId: '1:800812168325:web:dbf8b9cd42f03d0c50e5ec'
-};
 
 // router configuration 
 const appRoutes: Routes = [
@@ -41,7 +31,7 @@ const appRoutes: Routes = [
 
 
 
-//import { firebase } from '../env';
+import { firebase } from '../environments/firebase.config';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +40,6 @@ const appRoutes: Routes = [
     LoginPageComponent,
     PageNotFoundComponent,
     HeaderComponent,
-    FooterComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -63,7 +52,7 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(firebase),
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

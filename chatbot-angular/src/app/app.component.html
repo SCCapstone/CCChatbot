@@ -1,13 +1,20 @@
 
   <!--Header-->
 <app-header></app-header>
-<!-- Buttons need to be changed to events that happen automatically 
-  <button (click)="auth.login()"> Login </button>
-  <button (click)="auth.getCalendar()"> Get Google Calendar </button>
 
-   Connect with dialog flow 
-  <button (click)="auth.insertEvent()"> Add Event </button>-->
+<div *ngIf="auth.user$ | async as user; else login">
+  <pre>
+    {{ user | json }}
+  </pre>
+  
+  <hr>
+  <button class="button" (click)="auth.signOut()">Sign Out</button>
 
+</div>
+
+<ng-template #login>
+  <button class="button" (click)="auth.googleSignin()">Login with Google</button>
+</ng-template>
 
 <!--Routes Injected here-->
 <router-outlet></router-outlet>
