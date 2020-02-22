@@ -24,8 +24,42 @@ export class AuthService {
     private afs: AngularFirestore,
     private router: Router
   ) { 
-    this.user$ = this.afAuth.authState
-
-    
+    this.user$ = this.afAuth.authState.pipe(
+      switchMap(user => {
+        if (user) {
+          return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
+        }
+        else {
+          return of(null);
+        }
+      })
+    ) 
   }
+
+// google sign in - pop up window to prompt user to sign in using google
+  async googleSignin(){
+    const provider = new auth.GoogleAuthProvider();
+    const credential = await this.afAuth.auth.signInWithPopup(provider);
+    return this.updateUserData(credential.user);
+  }
+
+  // signs user out and returns them to the main page
+  async signOut() {
+    await this.afAuth.auth.signOut();
+    return this.router.navigate(['/']);
+  }
+
+  private updateUserData({ uid, email}: User) {
+    // sets user data to firestore on login
+    const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${uid}`);
+
+    const data = {
+      uid,
+      email
+    };
+
+    return userRef.set(data, { merge: true });
+  }
+
+
 }
