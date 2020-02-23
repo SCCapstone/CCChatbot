@@ -1,0 +1,15 @@
+body{
+    padding: 0;
+    margin: 0;
+    }
+    .hero{
+    height: 100vh;
+    position: relative;
+    }
+    .notification{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    }
+    .button{
+    margin-top: 10px;
+    }

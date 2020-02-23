@@ -1,4 +1,53 @@
 <h3>User Logged: {{ user?.displayName }} </h3>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Form in Bulma</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+  </head>
+  <body>
+    <div class="hero is-primary">
+      <div class="hero-body">
+        <h1 class="title has-text-centered is-size-2">Login or Create an Account!</h1>
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <div class="notification is-light">
+           <!--<figure class="image container is-64x64">
+                <img src="bulma.png">
+              </figure>-->   
+              <div class="field">
+                <label class="label">Name</label>
+                <p class="control has-icons-left has-icons-right">
+                  <input class="input" type="email" placeholder="Email">
+                  <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <label class="label">Password:</label>
+                <p class="control has-icons-left">
+                  <input class="input" type="password" placeholder="Password">
+                  <span class="icon is-small is-left">
+                  <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <a class="button is-primary is-light">Login</a> 
+              <a class="button is-light">Create an Account</a>
+              <a class="button  is-light" (click) = "loginGoogle()">Login With Google</a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
 <button *ngIf="!user" (click) = "loginGoogle()">Login With Google</button>
 
 <button *ngIf="user" (click)="logout()">Logout</button>

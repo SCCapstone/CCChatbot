@@ -10,17 +10,20 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { HomePageComponent } from './home-page/home-page.component';
 import { AgentPageComponent } from './agent-page/agent-page.component';
-import { LoginPageComponent } from './login-page/login-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ChatDialogComponent } from './chat/chat-dialog/chat-dialog.component';
 import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFirestore } from '@angular/fire/firestore';
 
+import { firebase } from '../environments/firebase.config';
+import { LoginComponent } from './auth/login/login.component';
+import { LoginService } from './auth/login.service';
+
 
 // router configuration 
 const appRoutes: Routes = [
-  { path: 'login', component: LoginPageComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'agent', component: AgentPageComponent },
   { path: 'home', component: HomePageComponent },
   { path: 'chat', component: ChatDialogComponent}, 
@@ -31,15 +34,12 @@ const appRoutes: Routes = [
 
 
 
-import { firebase } from '../environments/firebase.config';
-import { LoginComponent } from './auth/login/login.component';
-import { LoginService } from './auth/login.service';
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     AgentPageComponent,
-    LoginPageComponent,
+    LoginComponent,
     PageNotFoundComponent,
     HeaderComponent,
     LoginComponent,

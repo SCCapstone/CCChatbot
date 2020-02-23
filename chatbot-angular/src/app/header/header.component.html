@@ -15,7 +15,9 @@
             <a class="navbar-item" routerLink="/chat">Chat</a>
         </div>
         <div class="navbar-end">
-          <a class="navbar-item" routerLink="/login">Login</a>
+          <a *ngIf="!user" class="navbar-item" routerLink="/login">Login</a>
+          <a *ngIf="user" class="navbar-item" (click)="logout()">Logout</a>
+ 
 
         </div>
     </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../auth/login.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  user: firebase.User;
+
+  constructor(
+  private loginservice: LoginService
+  ) { }
 
   ngOnInit() {
+    this.loginservice.getLoggedInUser()
+    .subscribe(user =>{
+      this.user=user;
+    })
+  }
+
+  logout(){
+    this.loginservice.logout();
   }
 
 }
