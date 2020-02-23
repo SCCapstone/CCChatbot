@@ -4,7 +4,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
 @Injectable()
-export class AuthService {
+export class LoginService {
   private user: Observable<firebase.User>;
   private userDetails: firebase.User = null;
 constructor(private _firebaseAuth: AngularFireAuth, private router: Router) { 
@@ -22,7 +22,7 @@ this.user.subscribe(
       );
   }
 
-  signInWithGithub() {
+signInWithGithub() {
     return this._firebaseAuth.auth.signInWithPopup(
         new firebase.auth.GithubAuthProvider()
     )
@@ -44,4 +44,8 @@ logout() {
     this._firebaseAuth.auth.signOut()
     .then((res) => this.router.navigate(['/']));
   }
+
+getLoggedInUser() {
+  return this._firebaseAuth.authState;
+}
 }

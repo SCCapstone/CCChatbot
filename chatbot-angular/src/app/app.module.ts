@@ -32,6 +32,8 @@ const appRoutes: Routes = [
 
 
 import { firebase } from '../environments/firebase.config';
+import { LoginComponent } from './auth/login/login.component';
+import { LoginService } from './auth/login.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +42,7 @@ import { firebase } from '../environments/firebase.config';
     LoginPageComponent,
     PageNotFoundComponent,
     HeaderComponent,
+    LoginComponent,
   ],
   imports: [
     RouterModule.forRoot(
@@ -52,7 +55,7 @@ import { firebase } from '../environments/firebase.config';
     AngularFireModule.initializeApp(firebase),
     AngularFireAuthModule
   ],
-  providers: [AngularFirestore],
+  providers: [AngularFirestore, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

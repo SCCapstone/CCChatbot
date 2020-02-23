@@ -1,0 +1,4 @@
+<h3>User Logged: {{ user?.displayName }} </h3>
+<button *ngIf="!user" (click) = "loginGoogle()">Login With Google</button>
+
+<button *ngIf="user" (click)="logout()">Logout</button>
