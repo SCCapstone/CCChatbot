@@ -22,11 +22,16 @@ this.user.subscribe(
       );
   }
 
-signInWithGithub() {
-    return this._firebaseAuth.auth.signInWithPopup(
-        new firebase.auth.GithubAuthProvider()
-    )
-}
+signUp(email:string, password: string){
+  this._firebaseAuth.auth.createUserWithEmailAndPassword(email,password)
+  .then(res=>{
+    console.log("Registered!",res);
+  })
+  .catch(error=>{
+    console.log('Sign up failed',error.message);
+  })
+}  
+
 
 signInWithGoogle() {
     return this._firebaseAuth.auth.signInWithPopup(

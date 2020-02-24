@@ -19,6 +19,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { firebase } from '../environments/firebase.config';
 import { LoginComponent } from './auth/login/login.component';
 import { LoginService } from './auth/login.service';
+import { RegisterComponent } from './auth/register/register/register.component';
 
 
 // router configuration 
@@ -27,6 +28,7 @@ const appRoutes: Routes = [
   { path: 'agent', component: AgentPageComponent },
   { path: 'home', component: HomePageComponent },
   { path: 'chat', component: ChatDialogComponent}, 
+  { path: 'register', component: RegisterComponent},
 
   // simple view to show error 404
   { path: '**', component: PageNotFoundComponent }
@@ -43,6 +45,7 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     HeaderComponent,
     LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     RouterModule.forRoot(
