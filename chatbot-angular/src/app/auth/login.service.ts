@@ -44,13 +44,15 @@ signIn(email:string, password:string){
   .catch(error=>{
     console.log("Sign in failed ", error.message)
   })
+  this.router.navigate(['/'])
 }
 
 
 signInWithGoogle() {
-    return this._firebaseAuth.auth.signInWithPopup(
+    this._firebaseAuth.auth.signInWithPopup(
       new firebase.auth.GoogleAuthProvider()
     )
+    this.router.navigate(['/'])
   }
 isLoggedIn() {
   if (this.userDetails == null ) {
@@ -62,6 +64,7 @@ isLoggedIn() {
 logout() {
     this._firebaseAuth.auth.signOut()
     .then((res) => this.router.navigate(['/']));
+    this.router.navigate(['/login'])
   }
 
 getLoggedInUser() {
