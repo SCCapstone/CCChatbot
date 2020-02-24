@@ -1,5 +1,3 @@
-<h3>User Logged: {{ user?.displayName }} </h3>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,7 +20,7 @@
               <div class="field">
                 <label class="label">Name</label>
                 <p class="control has-icons-left has-icons-right">
-                  <input class="input" type="email" placeholder="Email">
+                  <input class="input" type="email" #email placeholder="Email">
                   <span class="icon is-small is-left">
                   <i class="fas fa-envelope"></i>
                   </span>
@@ -31,13 +29,13 @@
               <div class="field">
                 <label class="label">Password:</label>
                 <p class="control has-icons-left">
-                  <input class="input" type="password" placeholder="Password">
+                  <input class="input" type="password" #password placeholder="Password">
                   <span class="icon is-small is-left">
                   <i class="fas fa-lock"></i>
                   </span>
                 </p>
               </div>
-              <a class="button is-primary is-light">Login</a> 
+              <a class="button is-primary is-light" (click)="service.signIn(email.value, password.value)">Login</a> 
               <a class="button is-light" routerLink="/register">Create an Account</a>
               <a class="button  is-light" (click) = "loginGoogle()">Login With Google</a>
             </div>

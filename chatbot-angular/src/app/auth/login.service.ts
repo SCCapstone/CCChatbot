@@ -5,6 +5,7 @@ import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class LoginService {
+  error: string;
   private user: Observable<firebase.User>;
   private userDetails: firebase.User = null;
 constructor(private _firebaseAuth: AngularFireAuth, private router: Router) { 
@@ -22,7 +23,7 @@ this.user.subscribe(
       );
   }
 
-signUp(email:string, password: string){
+signUp(email, password){
   this._firebaseAuth.auth.createUserWithEmailAndPassword(email,password)
   .then(res=>{
     console.log("Registered!",res);
@@ -30,7 +31,20 @@ signUp(email:string, password: string){
   .catch(error=>{
     console.log('Sign up failed',error.message);
   })
-}  
+
+  this.router.navigate(['/'])
+} 
+
+signIn(email:string, password:string){
+  this._firebaseAuth.auth.signInWithEmailAndPassword(email, password)
+  .then((user)=>{
+    console.log(user.user.email);
+    this.error = '';
+  })
+  .catch(error=>{
+    console.log("Sign in failed ", error.message)
+  })
+}
 
 
 signInWithGoogle() {

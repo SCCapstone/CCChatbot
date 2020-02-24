@@ -29,7 +29,7 @@
               <div class="field">
                 <label class="label">Email</label>
                 <p class="control has-icons-left has-icons-right">
-                  <input class="input" type="text" ng-model="newUser.email" placeholder="me@email.com">
+                  <input class="input" type="text" #email placeholder="me@email.com">
                   <span class="icon is-small is-left">
                   <i class="fas fa-envelope"></i>
                   </span>
@@ -38,13 +38,13 @@
               <div class="field">
                 <label class="label">Password:</label>
                 <p class="control has-icons-left">
-                  <input class="input" type="password" ng-model="newUser.password" placeholder="Password">
+                  <input class="input" type="password" #password placeholder="Password">
                   <span class="icon is-small is-left">
                   <i class="fas fa-lock"></i>
                   </span>
                 </p>
               </div>
-              <a class="button is-primary is-light" (click)="register()">Register</a>
+              <input type="button" class="button is-primary is-light" value="Register" (click)="service.signUp(email.value, password.value)">
             </div>
             
           </div>
