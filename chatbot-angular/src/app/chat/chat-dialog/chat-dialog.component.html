@@ -11,10 +11,9 @@
 
 <div class="messaging">
 
-  <input class="input is-rounded" type="text" placeholder="Your Message" [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
+  <button class="button"style="float: right;" (click)="sendMessage()">Send</button>
 
-  <button class="button" (click)="sendMessage()">Send</button>
+  <input class="input is-rounded" style="float: right;"type="text" placeholder="Your Message"
+   [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
 </div>
-
-
 
