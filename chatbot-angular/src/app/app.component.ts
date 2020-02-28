@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
     private loginService: LoginService, private webSocketService: WebSocketService) {}
 
 
-  ngOnInIt() {
+  ngOnInit() {
     // listen for an event (socket.io) listener
     this.webSocketService.listen('test event').subscribe((data)=>{
       console.log(data);
