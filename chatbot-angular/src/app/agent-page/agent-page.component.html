@@ -10,5 +10,109 @@
     </div>
     <iframe src = "https://calendar.google.com/calendar/embed?src=6mf9urqgnl7crnbg17oppp6ens%40group.calendar.google.com&ctz=America%2FNew_York"
      style="border: 0" width="100%" height = "750px" frameborder ="0" scrolling="no"></iframe>
+
+
+
+
+     <div ng-app = "mainApp" ng-controller = "chatController">
+       {{uiChatOptions}}
+       {{messageCallbackFunction}}
+     </div>
+    <script>
+      var mainApp = angular.module("mainApp", []);
+      mainApp.controller('chatController', function($scope){
+          $scope.uiChatOptions = {
+          //'left' or 'right'; defaults to right
+          usersListSide: 'right',
+          //if set to twa, the cha t will filter for twemoji awesome
+          emoji: 'twa',
+          curseFilter: true,
+          //start this will parse items in the input box on key up
+          mentionParse: true,
+          emojiParse: true,
+          pmParse: true,
+          //object to enable html input / false to disable
+          html: {
+            italicize: true,
+            bold: true,
+            underline: true
+          },
+          //end input box filters
+          defaultCurseReplacer: '$|^&!',
+          users: [arrayOfUsersInChat],
+          user: { userObject },
+          userFeedback: {
+            message: 'soandso is typing a message',
+          },
+          messages: [messagesFromUsersInChat]
+        };
+        
+        $scope.messageCallbackFunction = function (messageObject) {
+          //process message here whenever message received
+          //you can also alter the message here and return the change
+          return messageObject;
+        };
+
+        $scope.isTypingCallbackFunction = function (lengthOfCharacters) {
+          //process is activity here for user is typing...
+        };
+
+        $scope.chatPrivateMessageCallbackFunction = function (messageObject, userObject) {
+          //process message here whenever a private message is sent from the client user
+          //you can also alter the message here and return the change
+          return messageObject;
+        };
+
+        $scope.messageDeleteCallbackFunction = function (messageObject) {
+          //call for when an admin wants to delete a message
+
+          var arrayOfUsersInChat = [userObject, userObject];
+          arrayOfUsersInChat.push(userObject);
+
+
+          var messagesFromUsersInChat = [];
+          messagesFromUsersInChat.push({
+            //the same userobject as listed below.
+            user: { userObject },
+            //the message sent
+            message: 'message sent by user',
+            id: 'unique id(optional)',
+            //time of the messages
+            time: new Date().getHours() + ':' + new Date().getMinutes() + ':' + new Date().getSeconds(),
+            //if it is a private message
+            private: {
+              //who our client is having a conversation with
+              user: userObject,
+              //if the message is from the client to private user
+              from: true,
+              //if the message is to the client from private user
+              to: true,
+            },
+          });
+          
+        };
+
+        var userObject = {};
+        userObject = {
+          username: 'what to display',
+          id: 'unique id(optional)',
+          image: 'an image for the user',
+          //if you want to use gravatar you should generate the links server side and pass it into this image field
+          admin: false, // or true if they are a chat admin,
+          //use left or right to display which side the users image should be on
+          side: 'left'
+        };
+
+      })
+    </script>
+
+    
+
+<ui-chat chatoptions="uiChatOptions" chatmessage="messageCallbackFunction" chattyping="isTypingCallbackFunction"
+  chatprivatemessage="chatPrivateMessageCallbackFunction" chatmessagedelete="messageDeleteCallbackFunction"></ui-chat>
 </body>
 </html>
+
+
+
+  
