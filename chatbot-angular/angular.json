@@ -31,6 +31,10 @@
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.js",
               "./node_modules/jquery/dist/jquery.js"
+            ],
+            "scripts": [
+                "../node_modules/dist/angular-ui-chat.min.css",
+                "../node_modules/dist/angular-ui-chat.min.js"
             ]
           },
           "configurations": {
