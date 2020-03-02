@@ -4,3 +4,8 @@
     background-size: cover;
     background-position: center center;
 }
+
+a {
+    margin: 10px;
+    padding: 10px;
+}
