@@ -7,11 +7,12 @@ import {ChatDialogComponent} from './chat/chat-dialog/chat-dialog.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 
-export const routes: Routes = [  
+
+export const routes: Routes = [
 { path: 'login', component: LoginComponent },
 { path: 'admin', component: AgentPageComponent },
 { path: '', component: HomePageComponent },
-{ path: 'chat', component: ChatDialogComponent}, 
+{ path: 'chat', component: ChatDialogComponent},
 
 // simple view to show error 404
 //{ path: '**', component: PageNotFoundComponent }

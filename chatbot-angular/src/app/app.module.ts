@@ -22,17 +22,17 @@ import { LoginService } from './auth/login.service';
 import { RegisterComponent } from './auth/register/register/register.component';
 
 
-// router configuration 
+// router configuration
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'agent', component: AgentPageComponent },
   { path: 'home', component: HomePageComponent },
-  { path: 'chat', component: ChatDialogComponent}, 
+  { path: 'chat', component: ChatDialogComponent},
   { path: 'register', component: RegisterComponent},
 
   // simple view to show error 404
   { path: '**', component: PageNotFoundComponent }
-]; 
+];
 
 
 
