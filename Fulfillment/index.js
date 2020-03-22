@@ -61,23 +61,6 @@ const timeZoneOffset = '-04:00';         // Change it to your time zone offset
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
   const agent = new WebhookClient({ request, response });
-
-  function makeAppointment(agent) {
-    // Use the Dialogflow's date and time parameters to create Javascript Date instances, 'dateTimeStart' and 'dateTimeEnd',
-    // which are used to specify the appointment's time.
-    const appointmentDuration = 1;// Define the length of the appointment to be one hour.
-    const dateTimeStart = convertParametersDate(agent.parameters.date, agent.parameters.time);
-    const dateTimeEnd = addHours(dateTimeStart, appointmentDuration);
-    const appointmentTimeString = getLocaleTimeString(dateTimeStart);
-    const appointmentDateString = getLocaleDateString(dateTimeStart);
-    // Check the availability of the time slot and set up an appointment if the time slot is available on the calendar
-    return createCalendarEvent(dateTimeStart, dateTimeEnd).then(() => {
-      agent.add(`Got it. I have your appointment scheduled on ${appointmentDateString} at ${appointmentTimeString}. See you soon. Good-bye.`);
-    }).catch(() => {
-      agent.add(`Sorry, we're booked on ${appointmentDateString} at ${appointmentTimeString}. Would you like to try booking an appointment again or talk to a customer service representative?`);
-    });
-  }
-  // to get Information from user before scheduling an appointment
   
   // sessionId is id of chat session
   // a database is made of collections
@@ -86,8 +69,29 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   // the sessionId is the unique id
   // the document will contain all collected info about a user during their session
   ////// source: https://github.com/Lepetere/Dialogflow-Examples/blob/master/How%20to%20Persist%20Session%20Data%20to%20Firestore/index.js
-  // line 90 code created by Peter Fessel
+  // line 73 code created by Peter Fessel
   const sessionId = request.body.session.split("/").reverse()[0];
+  
+  function makeAppointment(agent) {
+    // Use the Dialogflow's date and time parameters to create Javascript Date instances, 'dateTimeStart' and 'dateTimeEnd',
+    // which are used to specify the appointment's time.
+    const appointmentDuration = 1;// Define the length of the appointment to be one hour.
+    const dateTimeStart = convertParametersDate(agent.parameters.date, agent.parameters.time);
+    const dateTimeEnd = addHours(dateTimeStart, appointmentDuration);
+    const appointmentTimeString = getLocaleTimeString(dateTimeStart);
+    const appointmentDateString = getLocaleDateString(dateTimeStart);
+    let dateSave = appointmentDateString;
+    let timeSave = appointmentTimeString;
+    // Check the availability of the time slot and set up an appointment if the time slot is available on the calendar
+    return createCalendarEvent(dateTimeStart, dateTimeEnd).then(() => {
+      db.collection('Information').doc(sessionId).update({ date: dateSave, time: timeSave});
+      agent.add(`Got it. I have your appointment scheduled on ${dateSave} at ${timeSave}. See you soon. Good-bye.`);
+      //agent.add(`Got it. I have your appointment scheduled on ${appointmentDateString} at ${appointmentTimeString}. See you soon. Good-bye.`);
+    }).catch(() => {
+      agent.add(`Sorry, we're booked on ${appointmentDateString} at ${appointmentTimeString}. Would you like to try booking an appointment again or talk to a customer service representative?`);
+    });
+  }
+  // to get Information from user before scheduling an appointment
   
   // saves users name to db
   // the db collection name is Information
