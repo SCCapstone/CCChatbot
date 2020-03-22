@@ -26,7 +26,7 @@ const {google} = require('googleapis');
 const {WebhookClient} = require('dialogflow-fulfillment');
 
 // source: https://github.com/Lepetere/Dialogflow-Examples/blob/master/How%20to%20Persist%20Session%20Data%20to%20Firestore/index.js
-// line 25 to 27 code created by Peter Fessel
+// line 30 to 32 code created by Peter Fessel
 const admin = require('firebase-admin');
 admin.initializeApp();
 const db = admin.firestore();
@@ -86,7 +86,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   // the sessionId is the unique id
   // the document will contain all collected info about a user during their session
   ////// source: https://github.com/Lepetere/Dialogflow-Examples/blob/master/How%20to%20Persist%20Session%20Data%20to%20Firestore/index.js
-  // line 85 code created by Peter Fessel
+  // line 90 code created by Peter Fessel
   const sessionId = request.body.session.split("/").reverse()[0];
   
   // saves users name to db
