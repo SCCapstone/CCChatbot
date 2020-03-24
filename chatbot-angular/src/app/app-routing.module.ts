@@ -6,6 +6,7 @@ import {HomePageComponent} from './home-page/home-page.component';
 import {ChatDialogComponent} from './chat/chat-dialog/chat-dialog.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import { DownloadComponent } from './download/download.component';
+import { AuthGuard } from './core/auth.guard';
 
 
 export const routes: Routes = [  
@@ -13,7 +14,7 @@ export const routes: Routes = [
 { path: 'admin', component: AgentPageComponent },
 { path: '', component: HomePageComponent },
 { path: 'chat', component: ChatDialogComponent},
-{ path: 'download', component: DownloadComponent},
+{ path: 'download', component: DownloadComponent, canActivate: [AuthGuard]}, // logged in users cannot access downloadable code
   
 
 // simple view to show error 404
