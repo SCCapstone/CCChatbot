@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './services/auth.service';
 import { AngularFireAuth } from '@angular/fire/auth'
 import { LoginService } from './auth/login.service';
-import { WebSocketService } from './services/web-socket.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
