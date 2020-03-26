@@ -1,6 +1,6 @@
 /**
  * Copyright 2017 Google Inc. All Rights Reserved.
- * https://cloud.google.com/dialogflow/docs/tutorials/build-an-agent/create-fulfillment-using-webhook
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
+// all calendar related functions and code where provided by Dialogflow
+// https://cloud.google.com/dialogflow/docs/tutorials/build-an-agent/create-fulfillment-using-webhook
+// modified for our region, project id, client email 
+// copyright above 
+
 'use strict';
 
 const functions = require('firebase-functions');
-// admin is code for database 
-const admin = require('firebase-admin');
 const {google} = require('googleapis');
 const {WebhookClient} = require('dialogflow-fulfillment');
-  // source for setting up database
-  // https://www.youtube.com/watch?v=C8iaKOjyqnM
-// name: Axle Web Technologies
-// database
-admin.initializeApp({
-  credential: admin.credential.applicationDefault(),
-  //ws is for web socket
-  databaseURL:'ws://acmedemo-tefspy.firebaseio.com/'
-});
+
+// source: https://github.com/Lepetere/Dialogflow-Examples/blob/master/How%20to%20Persist%20Session%20Data%20to%20Firestore/index.js
+// line 30 to 32 code created by Peter Fessel
+const admin = require('firebase-admin');
+admin.initializeApp();
+const db = admin.firestore();
 
 // Enter your calendar ID and service account JSON below.
 const calendarId2 = '6mf9urqgnl7crnbg17oppp6ens@group.calendar.google.com'; // Example: 6ujc6j6rgfk02cp02vg6h38cs0@group.calendar.google.com
@@ -56,12 +56,22 @@ const serviceAccountAuth = new google.auth.JWT({
 const calendar = google.calendar('v3');
 process.env.DEBUG = 'dialogflow:*'; // It enables lib debugging statements
 
-const timeZone = 'America/New_York';  // Change it to your time zone
-const timeZoneOffset = '-05:00';         // Change it to your time zone offset
+const timeZone = 'America/Barbados';  // Change it to your time zone
+const timeZoneOffset = '-04:00';         // Change it to your time zone offset
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
   const agent = new WebhookClient({ request, response });
-
+  
+  // sessionId is id of chat session
+  // a database is made of collections
+  // each collection is made of documents
+  // each document has a unique id
+  // the sessionId is the unique id
+  // the document will contain all collected info about a user during their session
+  ////// source: https://github.com/Lepetere/Dialogflow-Examples/blob/master/How%20to%20Persist%20Session%20Data%20to%20Firestore/index.js
+  // line 73 code created by Peter Fessel
+  const sessionId = request.body.session.split("/").reverse()[0];
+  
   function makeAppointment(agent) {
     // Use the Dialogflow's date and time parameters to create Javascript Date instances, 'dateTimeStart' and 'dateTimeEnd',
     // which are used to specify the appointment's time.
@@ -70,43 +80,47 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     const dateTimeEnd = addHours(dateTimeStart, appointmentDuration);
     const appointmentTimeString = getLocaleTimeString(dateTimeStart);
     const appointmentDateString = getLocaleDateString(dateTimeStart);
+    let dateSave = appointmentDateString;
+    let timeSave = appointmentTimeString;
     // Check the availability of the time slot and set up an appointment if the time slot is available on the calendar
     return createCalendarEvent(dateTimeStart, dateTimeEnd).then(() => {
-      agent.add(`Got it. I have your appointment scheduled on ${appointmentDateString} at ${appointmentTimeString}. See you soon. Good-bye.`);
+      db.collection('Information').doc(sessionId).update({ date: dateSave, time: timeSave});
+      agent.add(`Got it. I have your appointment scheduled on ${dateSave} at ${timeSave}. See you soon. Good-bye.`);
+      //agent.add(`Got it. I have your appointment scheduled on ${appointmentDateString} at ${appointmentTimeString}. See you soon. Good-bye.`);
     }).catch(() => {
-      agent.add(`Sorry, we're booked on ${appointmentDateString} at ${appointmentTimeString}. Is there anything else I can do for you?`);
+      agent.add(`Sorry, we're booked on ${appointmentDateString} at ${appointmentTimeString}. Would you like to try booking an appointment again or talk to a customer service representative?`);
     });
   }
-  // source for functions of save and read
-  // https://www.youtube.com/watch?v=C8iaKOjyqnM
-  // name: Axle Web Technologies
-  function handleSaveToDB(agent){
-    // created a parameter called text in SaveToDB intent
-    // if there was a parameter called soda then code would be
-    // const text = agent.parameters.soda;
-    // gets the text to save to DB
-    const text = agent.parameters.text;
-    // created a table called data
-    // data has one attribute text
-    // saving to db
-    return admin.database().ref('data').set({
-      text: text
-    });
+  // to get Information from user before scheduling an appointment
+  
+  // saves users name to db
+  // the db collection name is Information
+  // information attributes are firstname, lastname, address, phonenumber
+    function getName(agent) {
+      let firstname = agent.parameters.firstname;
+      let lastname = agent.parameters.lastname;
+    db.collection('Information').doc(sessionId).set({firstname: firstname, lastname: lastname});
+    agent.add(`What is your address and zip code?`);
   }
-  function handleReadFromDB(agent) {
-    // snapshot is the data table
-    // the children are the tables attributes
-    return admin.database().ref('data').once('value').then((snapshot) => {
-      const value = snapshot.child('text').val();
-      if(value !== null){
-        agent.add(`${value} is the element from the database`);
-      }
-    });
+  // puts users address in db
+  // it will accept the following user input
+  // street address, city, country, state, island, shortcut, and zip code
+  function getAddress(agent) {
+      let address = agent.parameters.location;
+    db.collection('Information').doc(sessionId).update({address:address});
+    agent.add(`What is your phone number?`);
+  }
+  // saves users phone number to db
+  function getPhone(agent) {
+    let phone = agent.parameters.phonenumber;
+    db.collection('Information').doc(sessionId).update({ phonenumber: phone});
+    agent.add(`What day do you need to schedule a technician?`);
   }
   let intentMap = new Map();
   intentMap.set('Appointment Intent', makeAppointment);  // It maps the intent 'Make Appointment' to the function 'makeAppointment()'
-  intentMap.set('SaveToDB',handleSaveToDB); // It maps the intent 'SaveToDB' to the function 'handleSaveToDB()'
-  intentMap.set('ReadFromDB',handleReadFromDB); // It maps the intent 'ReadFromDB' to the function 'handleReadFromDB()'
+  intentMap.set('Full Name', getName);
+  intentMap.set('Customer Address', getAddress);
+  intentMap.set('Customer Phone Number', getPhone);
   agent.handleRequest(intentMap);
 });
 
