@@ -4,6 +4,20 @@ h3{
     margin: 5px;
 }
 
+ /* Style buttons */
+ .btn {
+    background-color: rgb(79, 137, 196);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 10px;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: RoyalBlue;
+  } 
+
 .message {
     font-size: 18px;
     border-radius: 15px;

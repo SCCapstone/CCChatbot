@@ -20,6 +20,8 @@ import { firebase } from '../environments/firebase.config';
 import { LoginComponent } from './auth/login/login.component';
 import { LoginService } from './auth/login.service';
 import { RegisterComponent } from './auth/register/register/register.component';
+import { DownloadComponent } from './download/download.component';
+import { AuthGuard } from './core/auth.guard';
 
 
 // router configuration
@@ -46,6 +48,7 @@ const appRoutes: Routes = [
     HeaderComponent,
     LoginComponent,
     RegisterComponent,
+    DownloadComponent,
   ],
   imports: [
     RouterModule.forRoot(
@@ -58,7 +61,7 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(firebase),
     AngularFireAuthModule
   ],
-  providers: [AngularFirestore, LoginService],
+  providers: [AngularFirestore, LoginService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
