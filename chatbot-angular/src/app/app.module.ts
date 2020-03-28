@@ -24,17 +24,17 @@ import { DownloadComponent } from './download/download.component';
 import { AuthGuard } from './core/auth.guard';
 
 
-// router configuration 
+// router configuration
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'agent', component: AgentPageComponent },
   { path: 'home', component: HomePageComponent },
-  { path: 'chat', component: ChatDialogComponent}, 
+  { path: 'chat', component: ChatDialogComponent},
   { path: 'register', component: RegisterComponent},
 
   // simple view to show error 404
   { path: '**', component: PageNotFoundComponent }
-]; 
+];
 
 
 

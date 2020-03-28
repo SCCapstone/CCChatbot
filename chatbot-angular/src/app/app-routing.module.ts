@@ -9,13 +9,13 @@ import { DownloadComponent } from './download/download.component';
 import { AuthGuard } from './core/auth.guard';
 
 
-export const routes: Routes = [  
+
+export const routes: Routes = [
 { path: 'login', component: LoginComponent },
 { path: 'calendar', component: AgentPageComponent },
 { path: '', component: HomePageComponent },
 { path: 'chat', component: ChatDialogComponent},
 { path: 'download', component: DownloadComponent, canActivate: [AuthGuard]}, // logged in users cannot access downloadable code
-  
 
 // simple view to show error 404
 //{ path: '**', component: PageNotFoundComponent }

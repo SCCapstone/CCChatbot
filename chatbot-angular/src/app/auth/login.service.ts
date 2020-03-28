@@ -3,12 +3,13 @@ import { Router } from "@angular/router";
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
+
 @Injectable()
 export class LoginService {
   error: string;
   public user: Observable<firebase.User>;
   private userDetails: firebase.User = null;
-constructor(private _firebaseAuth: AngularFireAuth, private router: Router) { 
+constructor(private _firebaseAuth: AngularFireAuth, private router: Router) {
       this.user = _firebaseAuth.authState;
 this.user.subscribe(
         (user) => {
@@ -32,8 +33,8 @@ signUp(email, password){
     console.log('Sign up failed',error.message);
   })
 
-  this.router.navigate(['/'])
-} 
+  this.router.navigate([''])
+}
 
 signIn(email:string, password:string){
   this._firebaseAuth.auth.signInWithEmailAndPassword(email, password)
@@ -43,6 +44,7 @@ signIn(email:string, password:string){
   })
   .catch(error=>{
     console.log("Sign in failed ", error.message)
+    this.router.navigate(['./login'])
   })
   this.router.navigate(['/'])
 }
