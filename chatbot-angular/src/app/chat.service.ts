@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../environments/environment';
-
 import { ApiAiClient } from 'api-ai-javascript/es6/ApiAiClient';
-
 import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import * as io from 'socket.io-client'
+
 
 //Message class for displaying messages in the component
 export class Message {
@@ -15,8 +13,6 @@ export class Message {
 @Injectable()
 export class ChatService {
 
-  private socket = io('http://localhost:1000');
-  
   readonly token = environment.dialogflow.acmeDemo;
   readonly client = new ApiAiClient({ accessToken: this.token });
 
