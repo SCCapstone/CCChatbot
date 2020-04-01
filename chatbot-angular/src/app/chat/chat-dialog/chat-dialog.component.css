@@ -1,15 +1,22 @@
 h3{
     width: auto;
-    padding: 5px;
-    margin: 5px;
+    padding: 5px; /* 5px*/
+    margin: 5px; /* 5px*/
 }
 
+.container {
+    max-width: 500 !important;
+    margin: auto;
+    margin-top: 4%;
+}
+.chat-page {
+    padding: 0 0 50px 0;
+}
 .message {
     font-size: 18px;
-    border-radius: 15px;
-    margin: 0 15px 10px;
+    border-radius: 15px; 
+    margin: 0 15px 10px; /*0 15 10*/
     padding: 15px;
-    /*position: relative;*/
     font-weight: bold;
     
 }@keyframes fadeIn {
@@ -22,18 +29,18 @@ h3{
     }
 }
 .message.to {
-    background-color: #2095FE;
+    background-color: rgba(46, 154, 226, 0.986);
     color: #fff;
-    margin-left: 400px;
+    margin-left: 900px; 
     text-align: right;
     box-shadow: 2.5px 2.5px 2.5px #444;
     animation-name: fadeIn;
     animation-duration: 500ms;
 }
 .message.from {
-    background-color: #fff;
+    background-color: rgb(224, 217, 217);
     color: #444;
-    margin-right: 400px;
+    margin-right: 750px;
     box-shadow: 2.5px 2.5px 2.5px #444;
     animation-name: fadeIn;
     animation-duration: 500ms;
@@ -44,19 +51,18 @@ margin-top: -10px;
 }
 
 input{
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 15px;
-    width: 50%;
+    margin-left: 10px; 
+    margin-right: 10px; 
+    padding: 15px; 
+    width: 25%;
 }
 
 #message-box-label{
-    margin: 5px;
-    padding: 5px;
-
+    margin: 5px; 
+    padding: 5px; 
 }
 
 #messaging{
-    margin-top: 500px;
+    margin-top: 500px; 
     float: right;
 }
