@@ -96,10 +96,81 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   // saves users name to db
   // the db collection name is Information
   // information attributes are firstname, lastname, address, phonenumber
-    function getName(agent) {
+    /*function getName(agent) {
       let firstname = agent.parameters.firstname;
       let lastname = agent.parameters.lastname;
     db.collection('Information').doc(sessionId).set({firstname: firstname, lastname: lastname});
+    agent.add(`What is your address and zip code?`);
+  }*/
+  // writes first name to database for customer service
+  function getFirstName(agent) {
+    let firstname = agent.parameters.firstname;
+    // code created by Google firebase lines 112 to 129
+    // modified by Epiphany
+    // source: https://firebase.google.com/docs/firestore/query-data/get-data#get_a_document
+    // check if document exists in the database
+    var docRef = db.collection('userReports').doc(sessionId);
+
+docRef.get().then(function(doc) {
+    if (doc.exists) {
+      // update the document
+        db.collection('userReports').doc(sessionId).update({ 
+      firstname: firstname
+    });
+    } else {
+        // doc.data() will be undefined in this case
+      // create a new document using the chat session id
+        db.collection('userReports').doc(sessionId).set({ 
+      firstname: firstname
+    });
+    }
+}).catch(function(error) {
+    console.log("Error getting document:", error);
+});
+    agent.add(`What is your last name?`);
+  }
+  // saving the last name to db for customer service
+  function getLastName(agent) {
+    let lastname = agent.parameters.lastname;
+    db.collection('userReports').doc(sessionId).update({ 
+      lastname: lastname
+    });
+    agent.add(`Thank you, connecting to a customer service agent.`);
+  }
+  // saving the first name for scheduling an appointment
+  function getFirstNameBook(agent) {
+    let firstname = agent.parameters.firstname;
+    // code created by Google firebase lines 148 to 165
+    // modified by Epiphany
+    // source: https://firebase.google.com/docs/firestore/query-data/get-data#get_a_document
+    // checking if document with session id exists in db
+    // the session id is the chat session id
+    var docRef = db.collection('Information').doc(sessionId);
+
+docRef.get().then(function(doc) {
+    if (doc.exists) {
+      // if exists then update it
+        db.collection('Information').doc(sessionId).update({ 
+      firstname: firstname
+    });
+    } else {
+        // doc.data() will be undefined in this case
+      // creates a new document using the session id
+        db.collection('Information').doc(sessionId).set({ 
+      firstname: firstname
+    });
+    }
+}).catch(function(error) {
+    console.log("Error getting document:", error);
+});
+    agent.add(`What is your last name?`);
+  }
+  // saves the last name to db for scheduling an appointment
+  function getLastNameBook(agent) {
+    let lastname = agent.parameters.lastname;
+    db.collection('Information').doc(sessionId).update({ 
+      lastname: lastname
+    });
     agent.add(`What is your address and zip code?`);
   }
   // puts users address in db
@@ -117,8 +188,14 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     agent.add(`What day do you need to schedule a technician?`);
   }
   let intentMap = new Map();
+  // for writing full name to db for customer service
+  intentMap.set('First Name.CS', getFirstName);
+  intentMap.set('Last Name.CS', getLastName);
+  // for writing full name to db for scheduling an appointment
+  intentMap.set('First Name.book', getFirstNameBook);
+  intentMap.set('Last Name.book', getLastNameBook);
   intentMap.set('Appointment Intent', makeAppointment);  // It maps the intent 'Make Appointment' to the function 'makeAppointment()'
-  intentMap.set('Full Name', getName);
+  //intentMap.set('Full Name', getName);
   intentMap.set('Customer Address', getAddress);
   intentMap.set('Customer Phone Number', getPhone);
   agent.handleRequest(intentMap);
