@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireStorage, AngularFireStorageReference } from '@angular/fire/storage';
+import { Observable } from 'rxjs/observable';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-download',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DownloadComponent implements OnInit {
 
-  constructor() { }
+  constructor(private afStorage: AngularFireStorage) { }
 
-  ngOnInit() {
+  ngOnInit() {  }
+
+  download(){
+    var storage = firebase.storage();
+    var pathReference = storage.ref('assets/download.html');
   }
 
 }
