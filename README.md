@@ -33,25 +33,10 @@ Open local host.
 `localhost:4200`
 
 # Setup
-The chatbot hosted on our support page engages the user about their slow internet connection. The chatbot reads and writes to a firebase database. 
+The chatbot hosted on our support page engages the user about their slow internet connection. The chatbot writes appointment information and any issues the customer may be having to the firebase database. [Dialogflow](https://dialogflow.cloud.google.com/#/login) is the platform that was used to build the chatbot.
+
 The chatbot uses Google Calendar API to book an appointment on the Acme Cable Company calendar. The calendar is on the Acme Support website.
 The chatbot can be downloaded to test on another website.
-
-## To view the Dialogflow console:
-Dialogflow is the platform that was used to build the chatbot.
-To use Dialogflow services on google, you will need a Gmail account.
-
-Gmail account: smithustudent@gmail.com
-
-Password: C4rolina&
-
-To log in:
-
-https://dialogflow.cloud.google.com/#/login
-
-To view the chatbot. Select "Dialogflow" in the top left corner. The chatbot will appear after the site reloads.
-
-**Test the chatbot on the website Acme Support. Not the chatbot in dialogflow.**
 
 # Deployment
 
