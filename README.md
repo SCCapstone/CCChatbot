@@ -33,7 +33,7 @@ Open local host.
 `localhost:4200`
 
 # Setup
-The chatbot hosted on our support page engages the user about their slow internet connection. The chatbot writes appointment information and any issues the customer may be having to the firebase database. Dialogflow is the platform that was used to build the chatbot.
+The chatbot writes appointment information and any issues the customer may be having to the firebase database. Dialogflow is the platform that was used to build the chatbot.
 
 The chatbot uses Google Calendar API to book an appointment on the Acme Cable Company calendar. The calendar is on the Acme Support website.
 The chatbot can be downloaded to test on another website.
