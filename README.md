@@ -32,12 +32,6 @@ Open local host.
 
 `localhost:4200`
 
-Dialogflow Instructions:
-
-To use Dialogflow services on google, you will need a Gmail account.
-
-> https://dialogflow.cloud.google.com/#/login
-
 # Setup
 The chatbot hosted on our support page engages the user about their slow internet connection. The chatbot reads and writes to a firebase database. 
 The chatbot uses Google Calendar API to book an appointment on the Acme Cable Company calendar. The calendar is on the Acme Support website.
