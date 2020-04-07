@@ -39,6 +39,8 @@ https://dialogflow.cloud.google.com/#/login
 
 To view the chatbot. Select "Dialogflow" in the top left corner. The chatbot will appear after the site reloads.
 
+**Test the chatbot on the website. Not the chatbot in dialogflow.**
+
 # Deployment
 
 Click the link https://acmedemo-tefspy.web.app/chat to view the chatbot.
