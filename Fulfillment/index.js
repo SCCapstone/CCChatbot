@@ -71,24 +71,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   ////// source: https://github.com/Lepetere/Dialogflow-Examples/blob/master/How%20to%20Persist%20Session%20Data%20to%20Firestore/index.js
   // line 73 code created by Peter Fessel
   const sessionId = request.body.session.split("/").reverse()[0];
-  function saveName(agent) {
-    const nameParam = agent.parameters.name;
-    const context = agent.getContext('awaiting_name_confirm');
-    const name = nameParam || context.parameters.name;
-    
-    agent.add(`Thank you, ` + name + `!`);
-    
-    return admin.database().ref('/names').push({name: name}).then((snapshot) => {
-    // Redirect with 303 SEE OTHER to the URL of the pushed object in the Firebase console.
-    console.log('database write sucessful: ' + snapshot.ref.toString());
-  });
-  }
-  // code was moved to line 208 and below
-  //intentMap = new Map();
-  //intentMap.set('Get Name', saveName);
-  //intentMap.set('Confirm Name Yes', saveName);
-  // intentMap.set('Confirm Name Yes', getName);
-  //agent.handleRequest(intentMap);
   
   function makeAppointment(agent) {
     // Use the Dialogflow's date and time parameters to create Javascript Date instances, 'dateTimeStart' and 'dateTimeEnd',
@@ -145,7 +127,7 @@ docRef.get().then(function(doc) {
 }).catch(function(error) {
     console.log("Error getting document:", error);
 });
-    agent.add(``);
+    agent.add(`What is your last name?`);
   }
   // saving the last name to db for customer service
   function getLastName(agent) {
@@ -153,7 +135,7 @@ docRef.get().then(function(doc) {
     db.collection('userReports').doc(sessionId).update({ 
       lastname: lastname
     });
-    agent.add(``);
+    agent.add(`Thank you, connecting to a customer service agent.`);
   }
   // saving the first name for scheduling an appointment
   function getFirstNameBook(agent) {
@@ -181,7 +163,7 @@ docRef.get().then(function(doc) {
 }).catch(function(error) {
     console.log("Error getting document:", error);
 });
-    agent.add(``);
+    agent.add(`What is your last name?`);
   }
   // saves the last name to db for scheduling an appointment
   function getLastNameBook(agent) {
@@ -189,7 +171,7 @@ docRef.get().then(function(doc) {
     db.collection('Information').doc(sessionId).update({ 
       lastname: lastname
     });
-    agent.add(``);
+    agent.add(`What is your address and zip code?`);
   }
   // puts users address in db
   // it will accept the following user input
@@ -197,31 +179,18 @@ docRef.get().then(function(doc) {
   function getAddress(agent) {
       let address = agent.parameters.location;
     db.collection('Information').doc(sessionId).update({address:address});
-    agent.add(``);
+    agent.add(`What is your phone number?`);
   }
   // saves users phone number to db
   function getPhone(agent) {
     let phone = agent.parameters.phonenumber;
     db.collection('Information').doc(sessionId).update({ phonenumber: phone});
-    agent.add(``);
-  }
-  // gets the issue the customer is having
-  // saves any user input into db
-  function getIssue(agent) {
-    let problem = agent.query;
-    db.collection('userReports').doc(sessionId).update({ 
-      Issue: problem
-    });
-    agent.add(``);
+    agent.add(`What day do you need to schedule a technician?`);
   }
   let intentMap = new Map();
-  intentMap.set('Get Name', saveName);
-  intentMap.set('Confirm Name Yes', saveName);
   // for writing full name to db for customer service
   intentMap.set('First Name.CS', getFirstName);
   intentMap.set('Last Name.CS', getLastName);
-  // saves user issue to db for customer service
-  intentMap.set('Last Name.CS - fallback', getIssue);
   // for writing full name to db for scheduling an appointment
   intentMap.set('First Name.book', getFirstNameBook);
   intentMap.set('Last Name.book', getLastNameBook);
