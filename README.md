@@ -10,9 +10,27 @@ technicians to select availability. Google Calendar API will be used for adding 
 # Technologies
 
 What the team is using to build project:
-
+* [Node](https://nodejs.org/en/)
 * Angular
 * Dialogflow
+
+In order to build project you will need Node.js, npm package manager, and Angular. The npm package manager is installed with Node by default.
+
+Next install Angular CLI:
+
+`npm install -g @angular/cli`
+
+Download repo in release. Extract the files. In terminal, navigate to the "chatbot-angular" folder.
+
+`npm install yarn`
+
+When the above has completed. Next.
+
+`ng serve`
+
+Open local host.
+
+`localhost:4200`
 
 Dialogflow Instructions:
 
