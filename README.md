@@ -27,7 +27,7 @@ The original support page was altered to included dialog suggestions. The suppor
 
 # Deployment
 
-Click the link https://acme-chatbot.firebaseapp.com/ to view the chatbot.
+Click the link https://acmedemo-tefspy.web.app/chat to view the chatbot.
 
 The Acme Cable Company Calendar https://calendar.google.com/calendar?cid=Nm1mOXVycWdubDdjcm5iZzE3b3BwcDZlbnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.
 
