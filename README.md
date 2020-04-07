@@ -28,11 +28,15 @@ The chatbot can be downloaded to test on another website.
 ## To view the Dialogflow console:
 Dialogflow is the platform that was used to build the chatbot.
 To use Dialogflow services on google, you will need a Gmail account.
+
 Gmail account: smithustudent@gmail.com
+
 Password: C4rolina&
 
 To log in:
+
 https://dialogflow.cloud.google.com/#/login
+
 To view the chatbot. Select "Dialogflow" in the top left corner. The chatbot will appear after the site reloads.
 
 # Deployment
