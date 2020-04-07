@@ -24,7 +24,7 @@ Download repo in release. Extract the files. In terminal, navigate to the "chatb
 
 `npm install yarn`
 
-When the above has completed. Next.
+When the above has completed.
 
 `ng serve`
 
@@ -51,7 +51,7 @@ https://dialogflow.cloud.google.com/#/login
 
 To view the chatbot. Select "Dialogflow" in the top left corner. The chatbot will appear after the site reloads.
 
-**Test the chatbot on the website. Not the chatbot in dialogflow.**
+**Test the chatbot on the website Acme Support. Not the chatbot in dialogflow.**
 
 # Deployment
 
