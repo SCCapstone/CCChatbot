@@ -44,6 +44,7 @@ signIn(email:string, password:string){
   })
   .catch(error=>{
     console.log("Sign in failed ", error.message)
+    alert("Sign in failed: " + error.message);
     this.router.navigate(['./login'])
   })
   this.router.navigate(['/'])
