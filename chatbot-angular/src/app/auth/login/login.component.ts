@@ -28,6 +28,8 @@ export class LoginComponent implements OnInit {
 
   logout() {
     this.service.logout();
+    location.reload(); 
+    console.log('test')
   }
 
 

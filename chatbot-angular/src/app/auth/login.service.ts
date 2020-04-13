@@ -66,7 +66,6 @@ isLoggedIn() {
 logout() {
     this._firebaseAuth.auth.signOut()
     .then((res) => this.router.navigate(['/']));
-    this.router.navigate(['/login'])
   }
 
 getLoggedInUser() {
