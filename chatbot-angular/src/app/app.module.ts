@@ -22,6 +22,7 @@ import { LoginService } from './auth/login.service';
 import { RegisterComponent } from './auth/register/register/register.component';
 import { DownloadComponent } from './download/download.component';
 import { AuthGuard } from './core/auth.guard';
+import { AboutComponent } from './about/about.component';
 
 
 // router configuration
@@ -50,6 +51,7 @@ const appRoutes: Routes = [
     LoginComponent,
     RegisterComponent,
     DownloadComponent,
+    AboutComponent,
   ],
   imports: [
     RouterModule.forRoot(
