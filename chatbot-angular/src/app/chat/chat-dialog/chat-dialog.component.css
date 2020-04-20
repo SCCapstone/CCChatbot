@@ -22,6 +22,21 @@ h3{
 }
 
  /* Style buttons */
+.btnReload {
+    background-color: rgb(2, 212, 16);
+    border: none;
+	border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+	text-align: center;
+	padding: 10px;
+	margin-left: 5px;
+  }
+    /* Darker background on mouse-over */
+  .btnReload:hover {
+    background-color: seagreen;
+  }
  .btn {
     background-color: rgb(79, 137, 196);
     border: none;
