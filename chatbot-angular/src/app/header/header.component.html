@@ -5,42 +5,24 @@
         <img src="assets/img/ACMElogo2.png" alt="--Logo--">
 
     </div>
-    <div class="navbar-burger burger" data-target="navbar-dropdown">
+    <div class="navbar-burger burger" data-target="navMenu">
       <span></span>
       <span></span>
       <span></span>
      </div>
+     <div class="navbar-menu" id="navMenu">
+      <div>
+          <div class="navbar-item is-hoverable"><a class="navbar-link">Account</a>
+          <div class="navbar-dropdown"><a class="navbar-item">Dashboard</a><a class="navbar-item">Profile</a><a class="navbar-item">Settings</a>
+          <hr class="navbar-divider" />
+          <div class="navbar-item">Logout</div>
+      </div>
+  </div>
 
-     <div class="navbar-dropdown" class="navbar-menu">
-      <div class="navbar-start is-link">
-          <a class="navbar-item" href="https://github.com/BulmaTemplates/bulma-templates">
-              Home
-          </a>
-          <div id="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link" href="/documentation/overview/start/">
-                  Docs
-              </a>
-              <div class="navbar-dropdown is-boxed">
-                  <a class="navbar-item">
-                      Admin
-                  </a>
-                  <a class="navbar-item" href="forum.html">
-                      Forum
-                  </a>
-                  <a class="navbar-item" href="cover.html">
-                      Cover
-                  </a>
-                  <a class="navbar-item" href="cards.html">
-                      Cards
-                  </a>
-                  <a class="navbar-item" href="blog.html">
-                      Blog
-                  </a>
-              </div>
-          </div>
+
     <!--Div class nav bar menu-->
 
-    <div class="navbar-menu">
+    <div id="navbar-menu" class="navbar-menu">
         <div class="navbar-start">
             <a class="navbar-item" routerLink="/">Home</a>
             <a class="navbar-item"routerLink="/calendar">Calendar</a>
