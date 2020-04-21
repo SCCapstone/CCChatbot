@@ -220,11 +220,16 @@ docRef.get().then(function(doc) {
   // for writing full name to db for customer service
   intentMap.set('First Name.CS', getFirstName);
   intentMap.set('Last Name.CS', getLastName);
+  intentMap.set('First Name.CS.any', getFirstName);// to catch unique names
+  intentMap.set('Last Name.CS.any', getLastName);
   // saves user issue to db for customer service
   intentMap.set('Last Name.CS - fallback', getIssue);
+  intentMap.set('Last Name.CS.any - yes - fallback', getIssue); // catching the reported issue from unique names branch
   // for writing full name to db for scheduling an appointment
   intentMap.set('First Name.book', getFirstNameBook);
   intentMap.set('Last Name.book', getLastNameBook);
+  intentMap.set('First Name.book.any', getFirstNameBook);// to catch unique names
+  intentMap.set('Last Name.book.any', getLastNameBook);
   intentMap.set('Appointment Intent', makeAppointment);  // It maps the intent 'Make Appointment' to the function 'makeAppointment()'
   //intentMap.set('Full Name', getName);
   intentMap.set('Customer Address', getAddress);
