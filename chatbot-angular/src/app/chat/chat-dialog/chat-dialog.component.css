@@ -32,6 +32,7 @@ html {
     height: 30rem;
     overflow: auto;
 }
+
 .message.to {
     
     background-color: rgba(46, 154, 226, 0.986);
@@ -43,7 +44,7 @@ html {
     animation-name: fadeIn;
     animation-duration: 500ms;
     float: right;
-    padding: 5px 5px;
+    padding: 10px 10px;
     border-radius: 1rem;
     display:inline-block;
 }
@@ -59,7 +60,7 @@ html {
     animation-duration: 500ms;
 
     border-radius: 1rem;
-    padding: 5px 10px;
+    padding: 10px 10px;
     margin-bottom: 0.2rem;
 }
 .message.to + .message.to,
@@ -87,6 +88,7 @@ body {
 
 .chat_heading {
     color: white;
+    -webkit-text-stroke: 0.3px black;
     font-weight: 500;
     font-size: 1rem;
 }
@@ -116,3 +118,14 @@ input{
   .btn:hover {
     background-color: RoyalBlue;
   } 
+
+  #minimize {
+    position: right;
+    bottom: 50%;
+    outline: none;
+    border:0;
+    border-radius: 20%;
+    padding:0;
+    height: 25px;
+    width: 25px;
+  }

@@ -8,27 +8,28 @@
   </button>
 
 </h3>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="chat.js"></script>
 <div class ="chat_box">
   <div class="chat_header">
     <h1 class="chat_heading" (click)='callFunc()'>ACME Chatbot
-      <button class="btnReload" style="float:right;" onClick="location.reload();">Close Chat Session</button>
+      <button (click)="toggleShow()" id = "minimize" style="float: right;">
+        <img src="assets/img/minimize.png">
+      </button>
     </h1>
   </div>
-  <div class="messages">
-    <ng-container *ngFor="let message of messages | async">
-
-      <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
-                                         'to':   message.sentBy === 'user' }">
-         {{ message.content }}
+  <div *ngIf="isShown" class="toggle" id="divshow">
+    <div class="messages">
+      <ng-container *ngFor="let message of messages | async">
+        <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                          'to':   message.sentBy === 'user' }">
+          {{ message.content }}
         </div>
-    </ng-container>
-   </div>
-   <div class="messaging">
+      </ng-container>
+    </div>
+    <div class="messaging">
 
-     <input class="input" type="text" placeholder="Your Message"
-     [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">      
-     <button class="button"style="float: right;" (click)="sendMessage()">Send</button>
+      <input class="input" type="text" placeholder="Your Message"
+      [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">      
+      <button class="button"style="float: right;" (click)="sendMessage()">Send</button>
+    </div>
   </div>
 </div>
