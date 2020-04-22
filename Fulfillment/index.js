@@ -115,11 +115,23 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     var currHour = inHour+timeZ;
     // hours of operation are 8am to 7pm for any day of the week
     var startDay = 8;
-    var endDay = 19;
+    var endDay = 19; 
     if(currHour >= startDay && currHour < endDay) {
       return true;
     } else {
       return false;
+    }
+  }
+  function sixOClock (dateTimeStart) {
+    var inHour = dateTimeStart.getHours();
+    var inMin = dateTimeStart.getMinutes();
+    var timeZ = parseInt(timeZoneOffset);
+    // the current hour for the chatbots timezone
+    var currHour = inHour+timeZ;
+    if(currHour == 18 && inMin > 0) {
+      return false;
+    } else {
+      return true;
     }
   }
   function makeAppointment(agent) {
@@ -136,6 +148,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     if(checkAppointmentInput(dateTimeStart)==true) {
       // checks the hours of operation
       if(hoursOfOperation(dateTimeStart)==true) {
+        // check that it isn't after 6pm
+        if(sixOClock(dateTimeStart)==true) {
     // Check the availability of the time slot and set up an appointment if the time slot is available on the calendar
     return createCalendarEvent(dateTimeStart, dateTimeEnd).then(() => {
       db.collection('Information').doc(sessionId).update({ date: dateSave, time: timeSave});
@@ -144,6 +158,9 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     }).catch(() => {
       agent.add(`Sorry, we're booked on ${appointmentDateString} at ${appointmentTimeString}. Would you like to try booking an appointment again or talk to a customer service representative?`);
     });
+        } else {
+          agent.add(`Our appointment window is approximately an hour long. Please choose a different time.`);
+        }
         } else {
         agent.add(`Sorry for the inconvenience, our hours of operation are from 8am to 7pm, 7 days a week. The appointment time at `+appointmentTimeString+
                   ` is outside of our hours of operation . Please enter a different time in.`);
@@ -158,7 +175,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   // writes first name to database for customer service
   function getFirstName(agent) {
     let firstname = agent.parameters.firstname;
-    // code created by Google firebase lines 165 to 182
+    // code created by Google firebase lines 182 to 199
     // modified by Epiphany
     // source: https://firebase.google.com/docs/firestore/query-data/get-data#get_a_document
     // check if document exists in the database
@@ -193,7 +210,7 @@ docRef.get().then(function(doc) {
   // saving the first name for scheduling an appointment
   function getFirstNameBook(agent) {
     let firstname = agent.parameters.firstname;
-    // code created by Google firebase lines 201 to 218
+    // code created by Google firebase lines 218 to 2235
     // modified by Epiphany
     // source: https://firebase.google.com/docs/firestore/query-data/get-data#get_a_document
     // checking if document with session id exists in db
