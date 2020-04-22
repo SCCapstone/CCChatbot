@@ -83,13 +83,45 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     console.log('database write sucessful: ' + snapshot.ref.toString());
   });
   }
-  // code was moved to line 208 and below
-  //intentMap = new Map();
-  //intentMap.set('Get Name', saveName);
-  //intentMap.set('Confirm Name Yes', saveName);
-  // intentMap.set('Confirm Name Yes', getName);
-  //agent.handleRequest(intentMap);
-  
+  // checking that the date and time given hasn't passed
+  function checkAppointmentInput (dateTimeStart) {
+    // gets the current time and date
+    var today = new Date();
+    // breaking the current timestamp into parts
+    var Day = today.getDate();
+    var Yr = today.getFullYear(); 
+    var Mo = today.getMonth()+1; 
+    var Hour = today.getHours(); 
+    var Min = today.getMinutes(); 
+    // takes the time and date given by user and breaks it into pieces
+    var inDay = dateTimeStart.getDate();
+    var inYr = dateTimeStart.getFullYear(); 
+    var inMo = dateTimeStart.getMonth()+1; 
+    var inHour = dateTimeStart.getHours();
+    var inMin = dateTimeStart.getMinutes(); 
+    if((inMo<Mo&&inYr==Yr)||(inYr<Yr)||(inDay<Day&&inMo==Mo&&inYr==Yr)||(inDay==Day&&inMo==Mo&&inYr==Yr&&inHour<Hour&&inMin<Min)) {
+      // if a invalid date or time...
+      return false;
+    } else {
+      return true;
+    }
+  }
+  function hoursOfOperation (dateTimeStart) {
+    // gets hour inputted by user
+    var inHour = dateTimeStart.getHours();
+    // gets the timezone set for the chatbot
+    var timeZ = parseInt(timeZoneOffset);
+    // the current hour for the chatbots timezone
+    var currHour = inHour+timeZ;
+    // hours of operation are 8am to 7pm for any day of the week
+    var startDay = 8;
+    var endDay = 19;
+    if(currHour >= startDay && currHour < endDay) {
+      return true;
+    } else {
+      return false;
+    }
+  }
   function makeAppointment(agent) {
     // Use the Dialogflow's date and time parameters to create Javascript Date instances, 'dateTimeStart' and 'dateTimeEnd',
     // which are used to specify the appointment's time.
@@ -100,6 +132,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     const appointmentDateString = getLocaleDateString(dateTimeStart);
     let dateSave = appointmentDateString;
     let timeSave = appointmentTimeString;
+    // checks that the date and time is current or is coming
+    if(checkAppointmentInput(dateTimeStart)==true) {
+      // checks the hours of operation
+      if(hoursOfOperation(dateTimeStart)==true) {
     // Check the availability of the time slot and set up an appointment if the time slot is available on the calendar
     return createCalendarEvent(dateTimeStart, dateTimeEnd).then(() => {
       db.collection('Information').doc(sessionId).update({ date: dateSave, time: timeSave});
@@ -108,22 +144,21 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     }).catch(() => {
       agent.add(`Sorry, we're booked on ${appointmentDateString} at ${appointmentTimeString}. Would you like to try booking an appointment again or talk to a customer service representative?`);
     });
+        } else {
+        agent.add(`Sorry for the inconvenience, our hours of operation are from 8am to 7pm, 7 days a week. The appointment time at `+appointmentTimeString+
+                  ` is outside of our hours of operation . Please enter a different time in.`);
+      }
+      } else {
+        agent.add(`I'm sorry, the appointment `+appointmentDateString+` at `+appointmentTimeString+
+                  ` has passed. Please enter a different time or date in.`);
+  }
   }
   // to get Information from user before scheduling an appointment
-  
-  // saves users name to db
-  // the db collection name is Information
-  // information attributes are firstname, lastname, address, phonenumber
-    /*function getName(agent) {
-      let firstname = agent.parameters.firstname;
-      let lastname = agent.parameters.lastname;
-    db.collection('Information').doc(sessionId).set({firstname: firstname, lastname: lastname});
-    agent.add(`What is your address and zip code?`);
-  }*/
+
   // writes first name to database for customer service
   function getFirstName(agent) {
     let firstname = agent.parameters.firstname;
-    // code created by Google firebase lines 112 to 129
+    // code created by Google firebase lines 165 to 182
     // modified by Epiphany
     // source: https://firebase.google.com/docs/firestore/query-data/get-data#get_a_document
     // check if document exists in the database
@@ -158,7 +193,7 @@ docRef.get().then(function(doc) {
   // saving the first name for scheduling an appointment
   function getFirstNameBook(agent) {
     let firstname = agent.parameters.firstname;
-    // code created by Google firebase lines 148 to 165
+    // code created by Google firebase lines 201 to 218
     // modified by Epiphany
     // source: https://firebase.google.com/docs/firestore/query-data/get-data#get_a_document
     // checking if document with session id exists in db
