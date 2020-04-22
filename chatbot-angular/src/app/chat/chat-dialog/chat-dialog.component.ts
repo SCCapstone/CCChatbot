@@ -22,6 +22,13 @@ export class ChatDialogComponent implements OnInit {
     this.messages = this.chat.conversation.asObservable()
         .scan((acc, val) => acc.concat(val) );
   }
+isShown: boolean = true;
+
+toggleShow() {
+
+ this.isShown = ! this.isShown;
+    
+}
 
   sendMessage() {
     this.chat.converse(this.formValue);
