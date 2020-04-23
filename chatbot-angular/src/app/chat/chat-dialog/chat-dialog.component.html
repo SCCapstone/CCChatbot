@@ -1,4 +1,5 @@
-<h3><b>What kind of issues are you having?</b>
+
+<!--<h3><b>What kind of issues are you having?</b>
 
 
   <button class="btn"style="float:right;"><i class="fa fa-download"></i> Download
@@ -8,28 +9,34 @@
   </button>
 
 </h3>
-<div class ="chat_box">
-  <div class="chat_header">
-    <h1 class="chat_heading">ACME Chatbot
-      <button (click)="toggleShow()" id = "minimize" style="float: right;">
-        <img src="assets/img/minimize.png">
-      </button>
-    </h1>
-  </div>
-  <div *ngIf="isShown" class="toggle" id="divshow">
-    <div class="messages">
-      <ng-container *ngFor="let message of messages | async">
-        <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
-                                          'to':   message.sentBy === 'user' }">
-          {{ message.content }}
-        </div>
-      </ng-container>
-    </div>
-    <div class="messaging">
+-->
 
-      <input class="input" type="text" placeholder="Your Message"
-      [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">      
-      <button class="button"style="float: right;" (click)="sendMessage()">Send</button>
+  <div class ='topics'>
+  
+  </div>
+
+  <div class ="chat_box">
+    <div class="chat_header">
+      <h1 class="chat_heading" (click)='callFunc()'>ACME Chatbot - Chat to resolve issues
+        <button (click)="toggleShow()" id = "minimize" style="float: right;">
+          <img src="assets/img/minimize.png">
+        </button>
+      </h1>
+    </div>
+    <div *ngIf="isShown" class="toggle" id="divshow">
+      <div class="messages">
+        <ng-container *ngFor="let message of messages | async">
+          <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                            'to':   message.sentBy === 'user' }">
+            {{ message.content }}
+          </div>
+        </ng-container>
+      </div>
+      <div class="messaging">
+
+        <input class="input" type="text" placeholder="Type your message here"
+        [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">      
+        <button class="button"style="float: right;" (click)="sendMessage()">Send</button>
+      </div>
     </div>
   </div>
-</div>
