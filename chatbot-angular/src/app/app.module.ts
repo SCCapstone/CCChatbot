@@ -14,7 +14,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ChatDialogComponent } from './chat/chat-dialog/chat-dialog.component';
 import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/firestore/';
+
 
 import { firebase } from '../environments/firebase.config';
 import { LoginComponent } from './auth/login/login.component';
@@ -62,7 +63,10 @@ const appRoutes: Routes = [
     AppRoutingModule,
     ChatModule,
     AngularFireModule.initializeApp(firebase),
+    AngularFireModule,
     AngularFireAuthModule
+
+
   ],
   providers: [AngularFirestore, LoginService, AuthGuard],
   bootstrap: [AppComponent]
