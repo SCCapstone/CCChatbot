@@ -30,6 +30,8 @@ toggleShow() {
     
 }
 
+
+
   sendMessage() {
     this.chat.converse(this.formValue);
     this.formValue = '';

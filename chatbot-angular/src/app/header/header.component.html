@@ -1,44 +1,29 @@
-  <!--Header-->
-  <div class="navbar is-dark">
-    <!--Logo-->
-    <div class="navbar-brand">
-        <img src="assets/img/ACMElogo2.png" alt="--Logo--">
-
+<!--Header-->
+<div class="navbar is-dark">
+  <!--Logo-->
+  <!--Div class nav bar menu-->
+  <div id="navbar-menu" class="navbar-menu">
+    <img src="assets/img/ACMElogo2.png" alt="--Logo--">
+    <div class="navbar-start">
+      <a class="navbar-item" routerLink="/">Home</a>
+      <a class="navbar-item"routerLink="/calendar">Calendar</a>
+      <a class="navbar-item" routerLink="/chat">Support</a>
+      <a class="navbar-item" routerLink="/download">Download</a>
+      <a class="navbar-item" routerLink="/about">About</a>  
     </div>
-    <div class="navbar-burger burger" data-target="navMenu">
-      <span></span>
-      <span></span>
-      <span></span>
-     </div>
-     <div class="navbar-menu" id="navMenu">
-      <div>
-          <div class="navbar-item is-hoverable"><a class="navbar-link">Account</a>
-          <div class="navbar-dropdown"><a class="navbar-item">Dashboard</a><a class="navbar-item">Profile</a><a class="navbar-item">Settings</a>
-          <hr class="navbar-divider" />
+        
+    <div class="navbar-end" style="float: right">
+      <a *ngIf="!user" class="navbar-item" routerLink="/login">Login</a>
+      <a *ngIf="user" class="navbar-item" (click)="logout()">Logout</a>
+      <div class="navbar-item is-hoverable">
+        <a class="navbar-link">Account</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item">Dashboard</a>
+            <a class="navbar-item">Profile</a>
+            <a class="navbar-item">Settings</a>
           <div class="navbar-item">Logout</div>
       </div>
-  </div>
-
-
-    <!--Div class nav bar menu-->
-
-    <div id="navbar-menu" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item" routerLink="/">Home</a>
-            <a class="navbar-item"routerLink="/calendar">Calendar</a>
-            <a class="navbar-item" routerLink="/chat">Chat</a>
-            <a class="navbar-item" routerLink="/download">Download</a>
-            <a class="navbar-item" routerLink="/about">About</a>
-            
-        </div>
-        
-
-        <div class="navbar-end">
-          <a *ngIf="!user" class="navbar-item" routerLink="/login">Login</a>
-          <a *ngIf="user" class="navbar-item" (click)="logout()">Logout</a>
-        </div>    
     </div>
-      
   </div>
-    
-    
+</div>
+
