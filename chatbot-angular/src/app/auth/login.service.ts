@@ -4,7 +4,10 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
+
 export class LoginService {
   error: string;
   public user: Observable<firebase.User>;

@@ -10,7 +10,17 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Home Page Title');
+    expect(page.getTitleText()).toEqual('Welcome to ACME Cable Company Support');
+  });
+
+  it('should display sub-title', () => {
+    page.navigateTo();
+    expect(page.getSubTitle()).toEqual('Test out our chatbot or login to download!');
+  });
+
+  it('should display description', () => {
+    page.navigateTo();
+    expect(page.getDescrip()).toEqual('The ACME Chatbot is designed to solve the most common issues with internet and cable TV. At your convenience, you can schedule an appointment with the chatbot.');
   });
 
   afterEach(async () => {
