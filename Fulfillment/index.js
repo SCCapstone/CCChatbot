@@ -257,6 +257,14 @@ docRef.get().then(function(doc) {
     db.collection('Information').doc(sessionId).update({ phonenumber: phone});
     agent.add(``);
   }
+  // gets customers email for customer service
+  function getEmail(agent) {
+    let email = agent.parameters.email;
+    db.collection('userReports').doc(sessionId).update({ 
+      email: email
+    });
+    agent.add(``);
+  }
   // gets the issue the customer is having
   // saves any user input into db
   function getIssue(agent) {
@@ -274,9 +282,10 @@ docRef.get().then(function(doc) {
   intentMap.set('Last Name.CS', getLastName);
   intentMap.set('First Name.CS.any', getFirstName);// to catch unique names
   intentMap.set('Last Name.CS.any', getLastName);
+  // saves email for customer service
+  intentMap.set('get email', getEmail);
   // saves user issue to db for customer service
-  intentMap.set('Last Name.CS - fallback', getIssue);
-  intentMap.set('Last Name.CS.any - yes - fallback', getIssue); // catching the reported issue from unique names branch
+  intentMap.set('get email - fallback', getIssue);
   // for writing full name to db for scheduling an appointment
   intentMap.set('First Name.book', getFirstNameBook);
   intentMap.set('Last Name.book', getLastNameBook);
