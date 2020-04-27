@@ -106,7 +106,21 @@ input{
     margin-left: 2px; 
     width: 85%;
 }
-
+.btnReload {
+    background-color: rgb(2, 212, 16);
+    border: none;
+	border-radius: 4px;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+	text-align: center;
+	margin-right: 5px;
+	padding: 2px;
+  }
+    /* Darker background on mouse-over */
+  .btnReload:hover {
+    background-color: seagreen;
+  }
 .btn {
     border: none;
     color: white;
