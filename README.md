@@ -1,9 +1,8 @@
 # Cable Company Chatbot
 
-> Our team is creating an AI chatbot for a Cable Company. The chatbot will resolve internet connectivity issues and will schedule appointments.
+> Our team is creating an AI chatbot for a Cable Company. The chatbot will resolve internet connection and cable tv issues and will schedule appointments. To provide better service the chatbot needs contact information and then the user selects a time and date for the appointment. The technician service hours are from 8 am to 7 pm, seven days a week.
 The chatbot will be used by the customers, customer service representatives, and technicians. 
-The chatbot will be made using Dialogflow. A calendar is needed for booking appointments and to allow
-technicians to select availability. Google Calendar API will be used for adding events.
+The chatbot will be made using Dialogflow.  Google Calendar API will be used for adding events.
 
 > Place screenshot of the app here.
 
