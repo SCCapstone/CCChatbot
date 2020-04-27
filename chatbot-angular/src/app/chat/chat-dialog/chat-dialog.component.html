@@ -21,6 +21,7 @@
         <button (click)="toggleShow()" id = "minimize" style="float: right;">
           <img src="assets/img/minimize.png">
         </button>
+        <button class="btnReload" style="float: right;" onClick="location.reload();">Clear Chat</button>
       </h1>
     </div>
     <div *ngIf="isShown" class="toggle" id="divshow">
