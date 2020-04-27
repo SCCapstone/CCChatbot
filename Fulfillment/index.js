@@ -156,7 +156,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       agent.add(`Got it. I have your appointment scheduled on ${dateSave} at ${timeSave}. See you soon. Good-bye.`);
       //agent.add(`Got it. I have your appointment scheduled on ${appointmentDateString} at ${appointmentTimeString}. See you soon. Good-bye.`);
     }).catch(() => {
-      agent.add(`Sorry, we're booked on ${appointmentDateString} at ${appointmentTimeString}. Would you like to try booking an appointment again or talk to a customer service representative?`);
+      agent.add(`Sorry, we're booked on ${appointmentDateString} at ${appointmentTimeString}. Please enter a different time in.`);
     });
         } else {
           agent.add(`Our appointment window is approximately an hour long. Please choose a different time.`);
