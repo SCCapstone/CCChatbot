@@ -2,7 +2,7 @@
 
 > Our team is creating an AI chatbot for ACME Cable Company. Acme Cable Company would like to utilize an AI chatbot for their customer service. The AI chatbot is used by customers, technicians, and customer service representatives. The AI chatbot diagnoses common internet connectivity and cable tv issues. The chatbot also allows the user to book an appointment. To provide better service the chatbot needs contact information and then the user selects a time and date for the appointment. The technician service hours are from 8 am to 7 pm, seven days a week.
 
-The chatbot will be made using Dialogflow.  Google Calendar API will be used for adding events. The chatbot uses firebase to save appointment information and customer service reports made by the users. A map of the dialog is below.
+> The chatbot will be made using Dialogflow.  Google Calendar API will be used for adding events. The chatbot uses firebase to save appointment information and customer service reports made by the users. A map of the dialog is below.
 
 # Technologies
 
