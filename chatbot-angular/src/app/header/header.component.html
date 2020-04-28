@@ -27,19 +27,10 @@
     </div>
 
 
-
-
-    <!--Div class nav bar menu-->
-
-    <div id="navbar-menu" class="navbar-menu">
-
-        
-
         <div class="navbar-end">
           <a *ngIf="!user" class="navbar-item" routerLink="/login">Login</a>
           <a *ngIf="user" class="navbar-item" (click)="logout()">Logout</a>
         </div>    
-    </div>
   </div>
 </div>
 
