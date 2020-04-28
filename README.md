@@ -1,10 +1,8 @@
 # Cable Company Chatbot
 
-> Our team is creating an AI chatbot for a Cable Company. The chatbot will resolve internet connection and cable tv issues and will schedule appointments. To provide better service the chatbot needs contact information and then the user selects a time and date for the appointment. The technician service hours are from 8 am to 7 pm, seven days a week.
-The chatbot will be used by the customers, customer service representatives, and technicians. 
-The chatbot will be made using Dialogflow.  Google Calendar API will be used for adding events.
+> Our team is creating an AI chatbot for ACME Cable Company. Acme Cable Company would like to utilize an AI chatbot for their customer service. The AI chatbot is used by customers, technicians, and customer service representatives. The AI chatbot diagnoses common internet connectivity and cable tv issues. The chatbot also allows the user to book an appointment. To provide better service the chatbot needs contact information and then the user selects a time and date for the appointment. The technician service hours are from 8 am to 7 pm, seven days a week.
 
-> Place screenshot of the app here.
+The chatbot will be made using Dialogflow.  Google Calendar API will be used for adding events. The chatbot uses firebase to save appointment information and customer service reports made by the users. A map of the dialog is below.
 
 # Technologies
 
@@ -12,6 +10,7 @@ What the team is using to build project:
 * [Node](https://nodejs.org/en/)
 * Angular
 * Dialogflow
+* Firebase
 
 In order to build project you will need Node.js, npm package manager, and Angular. The npm package manager is installed with Node by default.
 
@@ -35,7 +34,12 @@ Open local host.
 The chatbot writes appointment information and any issues the customer may be having to the firebase database. Dialogflow is the platform that was used to build the chatbot.
 
 The chatbot uses Google Calendar API to book an appointment on the Acme Cable Company calendar. The calendar is on the Acme Support website.
-The chatbot can be downloaded to test on another website.
+The chatbot can be downloaded for hosting on another website. In order to download the chatbot a user needs to login through our site. 
+
+# Chatbot Dialog Map
+[Link](https://github.com/SCCapstone/CCChatbot/wiki/Chatbot-Dialog-Outline) - This is simple outline of the chatbot dialog.
+
+To get the chat going greet the bot with a hello.
 
 # Deployment
 
