@@ -1,4 +1,21 @@
 img{
     width: 120px;
     height: 50px;
+	position: relative;
+}
+.navbar-burger {
+  position: absolute;
+  right: 20px;
+  top: 7px;
+}
+.navbar-menu.is-active {
+    display: block;
+	background-color: #202020;
+	color: white;
+	position:absolute;
+	top: 55px;
+	right: 17px;
+  }
+  .navbar-item {
+  color: white;
 }
