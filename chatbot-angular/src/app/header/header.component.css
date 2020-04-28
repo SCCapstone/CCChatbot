@@ -4,18 +4,21 @@ img{
 	position: relative;
 }
 .navbar-burger {
-  position: absolute;
-  right: 20px;
-  top: 7px;
+  position: relative;
 }
-.navbar-menu.is-active {
-    display: block;
+.navbar-end a {
+  float: right;
+}
+  .navbar-menu.is-active {
 	background-color: #202020;
-	color: white;
-	position:absolute;
-	top: 55px;
-	right: 0px;
+	display: block;
+	position: relative;
+	display: flex;
   }
   .navbar-item {
-  color: white;
+	  float: left;
+	  color: white;
+  }
+  .navbar-start a {
+  float: left;
 }
