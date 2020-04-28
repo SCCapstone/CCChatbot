@@ -51,10 +51,13 @@ The Acme Cable Company Calendar https://acmedemo-tefspy.web.app/calendar.
 Before testing in a new directory ALLWAYS run the following under the ~\CCChatbot\chatbot-angular directory:
 "npm install yarn"
 "npm update"
+"npm install jquery -save" 
 Running these commands will install yarn and update the package manager.  If these are not run, Behavioral tests may fail.
 
 Both unit and behavioral testing in run through Karma/Jasmine using the prefix "ng" from the "chatbot-angular" directive.  
 These commands are "ng test" and "ng e2e"
+
+There are a total of 3 cases for each type of test.  They should all pass.
 
 Unit testing looks recursively through the app components and finds the files: "name.spec.ts" and "name.ts".  
 Unit tests may be written using jasmine commands inside the .spec.ts files. 
