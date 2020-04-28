@@ -24,6 +24,7 @@ import { RegisterComponent } from './auth/register/register/register.component';
 import { DownloadComponent } from './download/download.component';
 import { AuthGuard } from './core/auth.guard';
 import { AboutComponent } from './about/about.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 // router configuration
@@ -64,7 +65,8 @@ const appRoutes: Routes = [
     ChatModule,
     AngularFireModule.initializeApp(firebase),
     AngularFireModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    BrowserAnimationsModule
 
 
   ],
