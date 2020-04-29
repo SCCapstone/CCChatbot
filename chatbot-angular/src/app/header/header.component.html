@@ -1,4 +1,3 @@
-
 <!--Header-->
 <div class="navbar is-dark">
   <!--Logo-->
@@ -7,9 +6,8 @@
     <a class="navbar-item" routerLink="/">
       <img src="assets/img/ACMElogo2.png" width="112" height="28">
     </a>
-    
-    <!--Line 12 is original code by git user GabMic-->
-    <div class="navbar-burger burger" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -28,10 +26,18 @@
     </div>
 
 
+
+
+    <!--Div class nav bar menu-->
+
+    <div id="navbar-menu" class="navbar-menu">
+
+        
+
         <div class="navbar-end">
           <a *ngIf="!user" class="navbar-item" routerLink="/login">Login</a>
           <a *ngIf="user" class="navbar-item" (click)="logout()">Logout</a>
         </div>    
+    </div>
   </div>
 </div>
-
