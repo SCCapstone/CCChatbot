@@ -1,25 +1,4 @@
 img{
     width: 120px;
     height: 50px;
-	position: relative;
-}
-.navbar-burger {
-  position: absolute;
-  left: 140px;
-}
-.navbar-end a {
-  float: right;
-}
-  .navbar-menu.is-active {
-	background-color: #202020;
-	display: block;
-	position: relative;
-	display: flex;
-  }
-  .navbar-item {
-	  float: left;
-	  color: white;
-  }
-  .navbar-start a {
-  float: left;
 }
